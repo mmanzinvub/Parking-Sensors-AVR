@@ -24,7 +24,6 @@ volatile uint8_t echo1_high = 0;
 volatile uint8_t echo2_high = 0;
 
 // ---------------- PCINT0 ISR (PB4/PB5) ----------------
-// Umjesto INT6 iz skripte, koristimo pin-change za port B.
 ISR(PCINT0_vect)
 {
     uint8_t pins = PINB;
@@ -65,36 +64,49 @@ void inicijalizacija()
     // adc_init();              // ako želiš T-temperaturu kasnije
 
     // tajmer 1 u normalnom na?inu rada
-    timer1_set_normal_mode();
-    timer1_set_prescaler(TIMER1_PRESCALER_8); // F_CPU/8 (tick ? 0.5us @16MHz)
+	
+	TCCR1A &= ~((1 << WGM00) | (1 << WGM01));
+	TCCR1B &= ~(1 << WGM02);
+	
+    // F_CPU/8 (tick ? 0.5us @16MHz)
+	
+	TCCR1B &= ~((1 << CS02) | (1 << CS01) | (1 << CS00));
+	TCCR1B |= (1 << CS01);
 
     // konfiguracija pinova za hcsr04 (TRIG na PD2 i PD3)
-    output_port(DDRD, PD2);     // TRIG1 (PD2) - izlazni pin
-    output_port(DDRD, PD3);     // TRIG2 (PD3) - izlazni pin
+	  // TRIG1 (PD2) - izlazni pin
+	DDRD |= (1 << PD2);
+	PORTD |= (1 << PD2);
+	  // TRIG2 (PD3) - izlazni pin
+	DDRD |= (1 << PD3);
+	PORTD |= (1 << PD3);
 
     // ECHO pinovi kao ulazi (PB4, PB5)
-    input_port(DDRB, PB4);      // ECHO1 (PB4) - ulaz
-    input_port(DDRB, PB5);      // ECHO2 (PB5) - ulaz
+	DDRB &= ~(1 << PB4);		 // ECHO1 (PB4) - ulaz
+	PORTB |= (1 << PB4);
+	
+	DDRB &= ~(1 << PB5);      // ECHO2 (PB5) - ulaz
+	PORTB |= (1 << PB5)
 
     // Omogu?i pin-change za PB4 i PB5 (PCINT4, PCINT5) na portu B
     PCMSK0 |= (1<<PCINT4) | (1<<PCINT5);
     PCICR  |= (1<<PCIE0);
 
-    interrupt_enable();         // omogu?i prekide (sei)
+    sei();         // omogu?i prekide (sei)
 }
 
 // ---------------- TRIG funkcije (isti stil) ----------------
 void hcsr04_trigg1()
 {
-    set_port(PORTD, PD2, 1);
+    PORTD |= (1 << PD2);
     _delay_us(10);              // ~10–20 us
-    set_port(PORTD, PD2, 0);
+    PORTD &= ~(1 << PD2);
 }
 void hcsr04_trigg2()
 {
-    set_port(PORTD, PD3, 1);
+    PORTD |= (1 << PD3);
     _delay_us(10);
-    set_port(PORTD, PD3, 0);
+    PORTD &= ~(1 << PD3);
 }
 
 // ---------------- Glavni program ----------------
