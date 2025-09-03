@@ -29,12 +29,12 @@ ISR(PCINT0_vect)
     // Senzor 1: PB4
     if (pins & (1<<PB4)) {
         if (!echo1_high) {
-            echo1_high = 1; // rastuci brid
-            TCNT1 = 0; // start mjerenja
+            echo1_high = 1; // Rastuci brid
+            TCNT1 = 0; // Start mjerenja
         }
     } else {
 		if (echo1_high) {
-            echo1_high = 0; // padajuci brid
+            echo1_high = 0; // Padajuci brid
             broj_impulsa1 = TCNT1;
             hcsr04_measured1 = true;
         }
@@ -43,12 +43,12 @@ ISR(PCINT0_vect)
     // Senzor 2: PB5
     if (pins & (1<<PB5)) {
         if (!echo2_high) {
-            echo2_high = 1; // rastuci brid
-            TCNT1 = 0; // start mjerenja
+            echo2_high = 1; // Rastuci brid
+            TCNT1 = 0; // Start mjerenja
         }
     } else {
         if (echo2_high) {
-            echo2_high = 0; // padajuci brid
+            echo2_high = 0; // Padajuci brid
             broj_impulsa2 = TCNT1;
             hcsr04_measured2 = true;
         }
