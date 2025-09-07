@@ -14,10 +14,15 @@ volatile bool hcsr04_measured2 = false;
 volatile bool hcsr04_measured3 = false;
 volatile uint8_t echo1_high = 0, echo2_high = 0, echo3_high = 0;
 
+#define LED_GREEN PF6
+#define LED_YELLOW PF7
+#define LED_RED PE6
+
 // ISR for PCINT0_vect (handles PB4, PB5, PB6)
 ISR(PCINT0_vect)
 {
 	uint8_t pins = PINB;
+
 	// Sensor 1: PB4
 	if (pins & (1 << PB4)) {
 		if (!echo1_high) { echo1_high = 1; TCNT1 = 0; }
@@ -28,6 +33,7 @@ ISR(PCINT0_vect)
 			hcsr04_measured1 = true;
 		}
 	}
+
 	// Sensor 2: PB5
 	if (pins & (1 << PB5)) {
 		if (!echo2_high) { echo2_high = 1; TCNT1 = 0; }
@@ -38,6 +44,7 @@ ISR(PCINT0_vect)
 			hcsr04_measured2 = true;
 		}
 	}
+
 	// Sensor 3: PB6
 	if (pins & (1 << PB6)) {
 		if (!echo3_high) { echo3_high = 1; TCNT1 = 0; }
@@ -53,19 +60,29 @@ ISR(PCINT0_vect)
 void inicijalizacija()
 {
 	lcd_init();
+
 	// Timer1 normal mode, prescaler 8
 	TCCR1A = 0;
 	TCCR1B = 0;
 	TCCR1B |= (1 << CS11);
+
 	// TRIG pins: PD2, PD3, PD4
 	DDRD |= (1 << PD2) | (1 << PD3) | (1 << PD4);
-	// ECHO pins as input: PB4, PB5, PB6
+
+	// ECHO pins as input: PB4, PB5, PB6 (no pull-ups)
 	DDRB &= ~((1 << PB4) | (1 << PB5) | (1 << PB6));
-	// Remove pull-ups if needed
 	PORTB &= ~((1 << PB4) | (1 << PB5) | (1 << PB6));
+
 	// Enable PCINT for PB4, PB5, PB6
 	PCMSK0 |= (1 << PCINT4) | (1 << PCINT5) | (1 << PCINT6);
 	PCICR |= (1 << PCIE0);
+
+	// LED pins as outputs, start OFF
+	DDRF |= (1 << LED_GREEN) | (1 << LED_YELLOW);
+	DDRE |= (1 << LED_RED);
+	PORTF &= ~((1 << LED_GREEN) | (1 << LED_YELLOW));
+	PORTE &= ~(1 << LED_RED);
+
 	sei();
 }
 
@@ -94,6 +111,7 @@ void hcsr04_trigg(uint8_t id)
 int main(void)
 {
 	inicijalizacija();
+
 	float d1 = 0, d2 = 0, d3 = 0;
 	float t_echo;
 	uint16_t time_delay = 0;
@@ -107,6 +125,7 @@ int main(void)
 			hcsr04_trigg(koji);
 			koji = (koji + 1) % 3;
 		}
+
 		if (hcsr04_measured1) {
 			t_echo = (float)broj_impulsa1 * 8.0f / (float)F_CPU;
 			d1 = (t_echo / 2.0f) * 343.0f * 100.0f;
@@ -122,15 +141,37 @@ int main(void)
 			d3 = (t_echo / 2.0f) * 343.0f * 100.0f;
 			hcsr04_measured3 = false;
 		}
-		// LCD: show 3 sensor distances, max 16 chars per line
+
+		// Minimal LCD output
 		if (time_delay == 0)
 		{
 			lcd_clrscr();
 			lcd_home();
-			// First line: D1:x.x D2:y.y
 			lcd_print("%.1f %.1f\n", d1, d2);
-			// Second line: D3:z.z
 			lcd_print("%.1f", d3);
+		}
+
+		// SIMPLE LED ZONE LOGIC (based on closest distance)
+		float min_dist = d1;
+		if (d2 < min_dist) min_dist = d2;
+		if (d3 < min_dist) min_dist = d3;
+
+		// Only one LED ON at a time
+		// GREEN: 200..60 cm
+		// YELLOW: 60..20 cm
+		// RED: 20..0 cm
+		// Outside 0..200 -> all off
+		PORTF &= ~((1 << LED_GREEN) | (1 << LED_YELLOW));
+		PORTE &= ~(1 << LED_RED);
+
+		if (min_dist <= 200.0f && min_dist >= 60.0f) {
+			PORTF |= (1 << LED_GREEN);
+			} else if (min_dist < 60.0f && min_dist >= 20.0f) {
+			PORTF |= (1 << LED_YELLOW);
+			} else if (min_dist < 20.0f && min_dist >= 0.0f) {
+			PORTE |= (1 << LED_RED);
+			} else {
+			// out of range: leave all off
 		}
 
 		_delay_ms(10);
