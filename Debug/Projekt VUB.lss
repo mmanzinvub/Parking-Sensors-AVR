@@ -1,0 +1,2628 @@
+
+Projekt VUB.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000001e  00800100  00001438  000014cc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001438  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          0000000e  0080011e  0080011e  000014ea  2**0
+                  ALLOC
+  3 .comment      0000005c  00000000  00000000  000014ea  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00001548  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000340  00000000  00000000  00001588  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002008  00000000  00000000  000018c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000e96  00000000  00000000  000038d0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00001431  00000000  00000000  00004766  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000790  00000000  00000000  00005b98  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000185f  00000000  00000000  00006328  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000fa0  00000000  00000000  00007b87  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000320  00000000  00000000  00008b27  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	0c 94 d7 00 	jmp	0x1ae	; 0x1ae <__ctors_end>
+       4:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+       8:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+       c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      10:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      14:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      18:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      1c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      20:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      24:	0c 94 0e 02 	jmp	0x41c	; 0x41c <__vector_9>
+      28:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      2c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      30:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      34:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      38:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      3c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      40:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      44:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      48:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      4c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      50:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      54:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      58:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      5c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      60:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      64:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      68:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      6c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      70:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      74:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      78:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      7c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      80:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      84:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      88:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      8c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      90:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      94:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      98:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      9c:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      a0:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      a4:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+      a8:	0c 94 f4 00 	jmp	0x1e8	; 0x1e8 <__bad_interrupt>
+
+000000ac <__trampolines_end>:
+      ac:	6e 61       	ori	r22, 0x1E	; 30
+      ae:	6e 00       	.word	0x006e	; ????
+
+000000b0 <__c.2332>:
+      b0:	69 6e 66 00 00 40 7a 10 f3 5a 00 a0 72 4e 18 09     inf..@z..Z..rN..
+      c0:	00 10 a5 d4 e8 00 00 e8 76 48 17 00 00 e4 0b 54     ........vH.....T
+      d0:	02 00 00 ca 9a 3b 00 00 00 e1 f5 05 00 00 80 96     .....;..........
+      e0:	98 00 00 00 40 42 0f 00 00 00 a0 86 01 00 00 00     ....@B..........
+      f0:	10 27 00 00 00 00 e8 03 00 00 00 00 64 00 00 00     .'..........d...
+     100:	00 00 0a 00 00 00 00 00 01 00 00 00 00 00 2c 76     ..............,v
+     110:	d8 88 dc 67 4f 08 23 df c1 df ae 59 e1 b1 b7 96     ...gO.#....Y....
+     120:	e5 e3 e4 53 c6 3a e6 51 99 76 96 e8 e6 c2 84 26     ...S.:.Q.v.....&
+     130:	eb 89 8c 9b 62 ed 40 7c 6f fc ef bc 9c 9f 40 f2     ....b.@|o.....@.
+     140:	ba a5 6f a5 f4 90 05 5a 2a f7 5c 93 6b 6c f9 67     ..o....Z*.\.kl.g
+     150:	6d c1 1b fc e0 e4 0d 47 fe f5 20 e6 b5 00 d0 ed     m......G.. .....
+     160:	90 2e 03 00 94 35 77 05 00 80 84 1e 08 00 00 20     .....5w........ 
+     170:	4e 0a 00 00 00 c8 0c 33 33 33 33 0f 98 6e 12 83     N......3333..n..
+     180:	11 41 ef 8d 21 14 89 3b e6 55 16 cf fe e6 db 18     .A..!..;.U......
+     190:	d1 84 4b 38 1b f7 7c 1d 90 1d a4 bb e4 24 20 32     ..K8..|......$ 2
+     1a0:	84 72 5e 22 81 00 c9 f1 24 ec a1 e5 3d 27           .r^"....$...='
+
+000001ae <__ctors_end>:
+     1ae:	11 24       	eor	r1, r1
+     1b0:	1f be       	out	0x3f, r1	; 63
+     1b2:	cf ef       	ldi	r28, 0xFF	; 255
+     1b4:	da e0       	ldi	r29, 0x0A	; 10
+     1b6:	de bf       	out	0x3e, r29	; 62
+     1b8:	cd bf       	out	0x3d, r28	; 61
+
+000001ba <__do_copy_data>:
+     1ba:	11 e0       	ldi	r17, 0x01	; 1
+     1bc:	a0 e0       	ldi	r26, 0x00	; 0
+     1be:	b1 e0       	ldi	r27, 0x01	; 1
+     1c0:	e8 e3       	ldi	r30, 0x38	; 56
+     1c2:	f4 e1       	ldi	r31, 0x14	; 20
+     1c4:	02 c0       	rjmp	.+4      	; 0x1ca <__do_copy_data+0x10>
+     1c6:	05 90       	lpm	r0, Z+
+     1c8:	0d 92       	st	X+, r0
+     1ca:	ae 31       	cpi	r26, 0x1E	; 30
+     1cc:	b1 07       	cpc	r27, r17
+     1ce:	d9 f7       	brne	.-10     	; 0x1c6 <__do_copy_data+0xc>
+
+000001d0 <__do_clear_bss>:
+     1d0:	21 e0       	ldi	r18, 0x01	; 1
+     1d2:	ae e1       	ldi	r26, 0x1E	; 30
+     1d4:	b1 e0       	ldi	r27, 0x01	; 1
+     1d6:	01 c0       	rjmp	.+2      	; 0x1da <.do_clear_bss_start>
+
+000001d8 <.do_clear_bss_loop>:
+     1d8:	1d 92       	st	X+, r1
+
+000001da <.do_clear_bss_start>:
+     1da:	ac 32       	cpi	r26, 0x2C	; 44
+     1dc:	b2 07       	cpc	r27, r18
+     1de:	e1 f7       	brne	.-8      	; 0x1d8 <.do_clear_bss_loop>
+     1e0:	0e 94 98 02 	call	0x530	; 0x530 <main>
+     1e4:	0c 94 1a 0a 	jmp	0x1434	; 0x1434 <_exit>
+
+000001e8 <__bad_interrupt>:
+     1e8:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000001ec <_Z12lcd_e_togglev>:
+	#if LCD_LINES==1
+	lcd_instr(LCD_SETDDRAMADDR + LCD_START_LINE1 + x);
+	#elif LCD_LINES==2
+	switch (y){
+		case 0: lcd_instr(LCD_SETDDRAMADDR + LCD_START_LINE1 + x);break;
+		case 1: lcd_instr(LCD_SETDDRAMADDR + LCD_START_LINE2 + x);break;
+     1ec:	89 9a       	sbi	0x11, 1	; 17
+     1ee:	89 98       	cbi	0x11, 1	; 17
+     1f0:	8f ea       	ldi	r24, 0xAF	; 175
+     1f2:	94 e0       	ldi	r25, 0x04	; 4
+     1f4:	01 97       	sbiw	r24, 0x01	; 1
+     1f6:	f1 f7       	brne	.-4      	; 0x1f4 <_Z12lcd_e_togglev+0x8>
+     1f8:	00 c0       	rjmp	.+0      	; 0x1fa <_Z12lcd_e_togglev+0xe>
+     1fa:	00 00       	nop
+     1fc:	08 95       	ret
+
+000001fe <_Z9lcd_writehh>:
+     1fe:	cf 93       	push	r28
+     200:	c8 2f       	mov	r28, r24
+     202:	66 23       	and	r22, r22
+     204:	11 f0       	breq	.+4      	; 0x20a <_Z9lcd_writehh+0xc>
+     206:	88 9a       	sbi	0x11, 0	; 17
+     208:	01 c0       	rjmp	.+2      	; 0x20c <_Z9lcd_writehh+0xe>
+     20a:	88 98       	cbi	0x11, 0	; 17
+     20c:	5e 98       	cbi	0x0b, 6	; 11
+     20e:	5f 98       	cbi	0x0b, 7	; 11
+     210:	46 98       	cbi	0x08, 6	; 8
+     212:	47 98       	cbi	0x08, 7	; 8
+     214:	cc 23       	and	r28, r28
+     216:	0c f4       	brge	.+2      	; 0x21a <_Z9lcd_writehh+0x1c>
+     218:	5e 9a       	sbi	0x0b, 6	; 11
+     21a:	c6 fd       	sbrc	r28, 6
+     21c:	5f 9a       	sbi	0x0b, 7	; 11
+     21e:	c5 fd       	sbrc	r28, 5
+     220:	46 9a       	sbi	0x08, 6	; 8
+     222:	c4 fd       	sbrc	r28, 4
+     224:	47 9a       	sbi	0x08, 7	; 8
+     226:	0e 94 f6 00 	call	0x1ec	; 0x1ec <_Z12lcd_e_togglev>
+     22a:	5e 98       	cbi	0x0b, 6	; 11
+     22c:	5f 98       	cbi	0x0b, 7	; 11
+     22e:	46 98       	cbi	0x08, 6	; 8
+     230:	47 98       	cbi	0x08, 7	; 8
+     232:	c3 fd       	sbrc	r28, 3
+     234:	5e 9a       	sbi	0x0b, 6	; 11
+     236:	c2 fd       	sbrc	r28, 2
+     238:	5f 9a       	sbi	0x0b, 7	; 11
+     23a:	c1 fd       	sbrc	r28, 1
+     23c:	46 9a       	sbi	0x08, 6	; 8
+     23e:	c0 fd       	sbrc	r28, 0
+     240:	47 9a       	sbi	0x08, 7	; 8
+     242:	0e 94 f6 00 	call	0x1ec	; 0x1ec <_Z12lcd_e_togglev>
+     246:	cf 91       	pop	r28
+     248:	08 95       	ret
+
+0000024a <_Z9lcd_instrh>:
+     24a:	60 e0       	ldi	r22, 0x00	; 0
+     24c:	0e 94 ff 00 	call	0x1fe	; 0x1fe <_Z9lcd_writehh>
+     250:	08 95       	ret
+
+00000252 <_Z8lcd_initv>:
+     252:	80 9a       	sbi	0x10, 0	; 16
+     254:	81 9a       	sbi	0x10, 1	; 16
+     256:	3f 9a       	sbi	0x07, 7	; 7
+     258:	3e 9a       	sbi	0x07, 6	; 7
+     25a:	57 9a       	sbi	0x0a, 7	; 10
+     25c:	56 9a       	sbi	0x0a, 6	; 10
+     25e:	2f ef       	ldi	r18, 0xFF	; 255
+     260:	80 e7       	ldi	r24, 0x70	; 112
+     262:	92 e0       	ldi	r25, 0x02	; 2
+     264:	21 50       	subi	r18, 0x01	; 1
+     266:	80 40       	sbci	r24, 0x00	; 0
+     268:	90 40       	sbci	r25, 0x00	; 0
+     26a:	e1 f7       	brne	.-8      	; 0x264 <_Z8lcd_initv+0x12>
+     26c:	00 c0       	rjmp	.+0      	; 0x26e <_Z8lcd_initv+0x1c>
+     26e:	00 00       	nop
+     270:	46 9a       	sbi	0x08, 6	; 8
+     272:	47 9a       	sbi	0x08, 7	; 8
+     274:	0e 94 f6 00 	call	0x1ec	; 0x1ec <_Z12lcd_e_togglev>
+     278:	8f e0       	ldi	r24, 0x0F	; 15
+     27a:	90 e4       	ldi	r25, 0x40	; 64
+     27c:	01 97       	sbiw	r24, 0x01	; 1
+     27e:	f1 f7       	brne	.-4      	; 0x27c <_Z8lcd_initv+0x2a>
+     280:	00 c0       	rjmp	.+0      	; 0x282 <_Z8lcd_initv+0x30>
+     282:	00 00       	nop
+     284:	46 9a       	sbi	0x08, 6	; 8
+     286:	47 9a       	sbi	0x08, 7	; 8
+     288:	0e 94 f6 00 	call	0x1ec	; 0x1ec <_Z12lcd_e_togglev>
+     28c:	8f e0       	ldi	r24, 0x0F	; 15
+     28e:	90 e4       	ldi	r25, 0x40	; 64
+     290:	01 97       	sbiw	r24, 0x01	; 1
+     292:	f1 f7       	brne	.-4      	; 0x290 <_Z8lcd_initv+0x3e>
+     294:	00 c0       	rjmp	.+0      	; 0x296 <_Z8lcd_initv+0x44>
+     296:	00 00       	nop
+     298:	46 9a       	sbi	0x08, 6	; 8
+     29a:	47 9a       	sbi	0x08, 7	; 8
+     29c:	0e 94 f6 00 	call	0x1ec	; 0x1ec <_Z12lcd_e_togglev>
+     2a0:	8f e0       	ldi	r24, 0x0F	; 15
+     2a2:	90 e4       	ldi	r25, 0x40	; 64
+     2a4:	01 97       	sbiw	r24, 0x01	; 1
+     2a6:	f1 f7       	brne	.-4      	; 0x2a4 <_Z8lcd_initv+0x52>
+     2a8:	00 c0       	rjmp	.+0      	; 0x2aa <_Z8lcd_initv+0x58>
+     2aa:	00 00       	nop
+     2ac:	47 98       	cbi	0x08, 7	; 8
+     2ae:	46 9a       	sbi	0x08, 6	; 8
+     2b0:	0e 94 f6 00 	call	0x1ec	; 0x1ec <_Z12lcd_e_togglev>
+     2b4:	88 e2       	ldi	r24, 0x28	; 40
+     2b6:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     2ba:	88 e0       	ldi	r24, 0x08	; 8
+     2bc:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     2c0:	81 e0       	ldi	r24, 0x01	; 1
+     2c2:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     2c6:	8f e3       	ldi	r24, 0x3F	; 63
+     2c8:	9f e1       	ldi	r25, 0x1F	; 31
+     2ca:	01 97       	sbiw	r24, 0x01	; 1
+     2cc:	f1 f7       	brne	.-4      	; 0x2ca <_Z8lcd_initv+0x78>
+     2ce:	00 c0       	rjmp	.+0      	; 0x2d0 <_Z8lcd_initv+0x7e>
+     2d0:	00 00       	nop
+     2d2:	82 e0       	ldi	r24, 0x02	; 2
+     2d4:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     2d8:	8f e3       	ldi	r24, 0x3F	; 63
+     2da:	9f e1       	ldi	r25, 0x1F	; 31
+     2dc:	01 97       	sbiw	r24, 0x01	; 1
+     2de:	f1 f7       	brne	.-4      	; 0x2dc <_Z8lcd_initv+0x8a>
+     2e0:	00 c0       	rjmp	.+0      	; 0x2e2 <_Z8lcd_initv+0x90>
+     2e2:	00 00       	nop
+     2e4:	8c e0       	ldi	r24, 0x0C	; 12
+     2e6:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     2ea:	08 95       	ret
+
+000002ec <_Z11lcd_setlineh>:
+     2ec:	82 30       	cpi	r24, 0x02	; 2
+     2ee:	31 f0       	breq	.+12     	; 0x2fc <_Z11lcd_setlineh+0x10>
+     2f0:	83 30       	cpi	r24, 0x03	; 3
+     2f2:	31 f0       	breq	.+12     	; 0x300 <_Z11lcd_setlineh+0x14>
+     2f4:	81 30       	cpi	r24, 0x01	; 1
+     2f6:	31 f4       	brne	.+12     	; 0x304 <_Z11lcd_setlineh+0x18>
+     2f8:	90 e4       	ldi	r25, 0x40	; 64
+     2fa:	05 c0       	rjmp	.+10     	; 0x306 <_Z11lcd_setlineh+0x1a>
+     2fc:	94 e1       	ldi	r25, 0x14	; 20
+     2fe:	03 c0       	rjmp	.+6      	; 0x306 <_Z11lcd_setlineh+0x1a>
+     300:	94 e5       	ldi	r25, 0x54	; 84
+     302:	01 c0       	rjmp	.+2      	; 0x306 <_Z11lcd_setlineh+0x1a>
+     304:	90 e0       	ldi	r25, 0x00	; 0
+     306:	28 2f       	mov	r18, r24
+     308:	30 e0       	ldi	r19, 0x00	; 0
+     30a:	30 93 1f 01 	sts	0x011F, r19	; 0x80011f <__data_end+0x1>
+     30e:	20 93 1e 01 	sts	0x011E, r18	; 0x80011e <__data_end>
+     312:	80 e8       	ldi	r24, 0x80	; 128
+     314:	89 0f       	add	r24, r25
+     316:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     31a:	08 95       	ret
+
+0000031c <_Z8lcd_charh>:
+     31c:	8a 30       	cpi	r24, 0x0A	; 10
+     31e:	79 f4       	brne	.+30     	; 0x33e <_Z8lcd_charh+0x22>
+     320:	80 91 1e 01 	lds	r24, 0x011E	; 0x80011e <__data_end>
+     324:	90 91 1f 01 	lds	r25, 0x011F	; 0x80011f <__data_end+0x1>
+     328:	18 16       	cp	r1, r24
+     32a:	19 06       	cpc	r1, r25
+     32c:	24 f4       	brge	.+8      	; 0x336 <_Z8lcd_charh+0x1a>
+     32e:	80 e0       	ldi	r24, 0x00	; 0
+     330:	0e 94 76 01 	call	0x2ec	; 0x2ec <_Z11lcd_setlineh>
+     334:	08 95       	ret
+     336:	8f 5f       	subi	r24, 0xFF	; 255
+     338:	0e 94 76 01 	call	0x2ec	; 0x2ec <_Z11lcd_setlineh>
+     33c:	08 95       	ret
+     33e:	61 e0       	ldi	r22, 0x01	; 1
+     340:	0e 94 ff 00 	call	0x1fe	; 0x1fe <_Z9lcd_writehh>
+     344:	08 95       	ret
+
+00000346 <_Z10lcd_print2Pc>:
+     346:	cf 93       	push	r28
+     348:	df 93       	push	r29
+     34a:	ec 01       	movw	r28, r24
+     34c:	21 96       	adiw	r28, 0x01	; 1
+     34e:	fc 01       	movw	r30, r24
+     350:	80 81       	ld	r24, Z
+     352:	88 23       	and	r24, r24
+     354:	29 f0       	breq	.+10     	; 0x360 <_Z10lcd_print2Pc+0x1a>
+     356:	0e 94 8e 01 	call	0x31c	; 0x31c <_Z8lcd_charh>
+     35a:	89 91       	ld	r24, Y+
+     35c:	81 11       	cpse	r24, r1
+     35e:	fb cf       	rjmp	.-10     	; 0x356 <_Z10lcd_print2Pc+0x10>
+     360:	df 91       	pop	r29
+     362:	cf 91       	pop	r28
+     364:	08 95       	ret
+
+00000366 <_Z9lcd_printPcz>:
+     366:	cf 93       	push	r28
+     368:	df 93       	push	r29
+     36a:	cd b7       	in	r28, 0x3d	; 61
+     36c:	de b7       	in	r29, 0x3e	; 62
+     36e:	c0 55       	subi	r28, 0x50	; 80
+     370:	d1 09       	sbc	r29, r1
+     372:	0f b6       	in	r0, 0x3f	; 63
+     374:	f8 94       	cli
+     376:	de bf       	out	0x3e, r29	; 62
+     378:	0f be       	out	0x3f, r0	; 63
+     37a:	cd bf       	out	0x3d, r28	; 61
+     37c:	ae 01       	movw	r20, r28
+     37e:	4b 5a       	subi	r20, 0xAB	; 171
+     380:	5f 4f       	sbci	r21, 0xFF	; 255
+     382:	fa 01       	movw	r30, r20
+     384:	61 91       	ld	r22, Z+
+     386:	71 91       	ld	r23, Z+
+     388:	af 01       	movw	r20, r30
+     38a:	ce 01       	movw	r24, r28
+     38c:	01 96       	adiw	r24, 0x01	; 1
+     38e:	0e 94 a0 09 	call	0x1340	; 0x1340 <vsprintf>
+     392:	ce 01       	movw	r24, r28
+     394:	01 96       	adiw	r24, 0x01	; 1
+     396:	0e 94 a3 01 	call	0x346	; 0x346 <_Z10lcd_print2Pc>
+     39a:	c0 5b       	subi	r28, 0xB0	; 176
+     39c:	df 4f       	sbci	r29, 0xFF	; 255
+     39e:	0f b6       	in	r0, 0x3f	; 63
+     3a0:	f8 94       	cli
+     3a2:	de bf       	out	0x3e, r29	; 62
+     3a4:	0f be       	out	0x3f, r0	; 63
+     3a6:	cd bf       	out	0x3d, r28	; 61
+     3a8:	df 91       	pop	r29
+     3aa:	cf 91       	pop	r28
+     3ac:	08 95       	ret
+
+000003ae <_Z10lcd_clrscrv>:
+
+//-----------------------------------------------------------------------------------------
+// FUNCTION: lcd_clrscr
+// PURPOSE:  Clear display and set cursor to home position
+void lcd_clrscr(void){
+	g_nCurrentLine = 0;
+     3ae:	10 92 1f 01 	sts	0x011F, r1	; 0x80011f <__data_end+0x1>
+     3b2:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <__data_end>
+	lcd_instr(LCD_CLEARDISPLAY);
+     3b6:	81 e0       	ldi	r24, 0x01	; 1
+     3b8:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     3bc:	8f e3       	ldi	r24, 0x3F	; 63
+     3be:	9f e1       	ldi	r25, 0x1F	; 31
+     3c0:	01 97       	sbiw	r24, 0x01	; 1
+     3c2:	f1 f7       	brne	.-4      	; 0x3c0 <_Z10lcd_clrscrv+0x12>
+     3c4:	00 c0       	rjmp	.+0      	; 0x3c6 <_Z10lcd_clrscrv+0x18>
+     3c6:	00 00       	nop
+     3c8:	08 95       	ret
+
+000003ca <_Z8lcd_homev>:
+
+//-----------------------------------------------------------------------------------------
+// FUNCTION: lcd_home
+// PURPOSE:  Set cursor to home position
+void lcd_home(void){
+	g_nCurrentLine = 0;
+     3ca:	10 92 1f 01 	sts	0x011F, r1	; 0x80011f <__data_end+0x1>
+     3ce:	10 92 1e 01 	sts	0x011E, r1	; 0x80011e <__data_end>
+	lcd_instr(LCD_RETURNHOME);
+     3d2:	82 e0       	ldi	r24, 0x02	; 2
+     3d4:	0e 94 25 01 	call	0x24a	; 0x24a <_Z9lcd_instrh>
+     3d8:	8f e3       	ldi	r24, 0x3F	; 63
+     3da:	9f e1       	ldi	r25, 0x1F	; 31
+     3dc:	01 97       	sbiw	r24, 0x01	; 1
+     3de:	f1 f7       	brne	.-4      	; 0x3dc <_Z8lcd_homev+0x12>
+     3e0:	00 c0       	rjmp	.+0      	; 0x3e2 <_Z8lcd_homev+0x18>
+     3e2:	00 00       	nop
+     3e4:	08 95       	ret
+
+000003e6 <_Z20timer1_set_prescalerh>:
+void pcint_pin_enable_all(){
+	PCMSK0 = 0xFF;
+}
+
+void pcint_pin_disable_all(){
+	PCMSK0 = 0x00;
+     3e6:	e1 e8       	ldi	r30, 0x81	; 129
+     3e8:	f0 e0       	ldi	r31, 0x00	; 0
+     3ea:	90 81       	ld	r25, Z
+     3ec:	98 7f       	andi	r25, 0xF8	; 248
+     3ee:	90 83       	st	Z, r25
+     3f0:	90 81       	ld	r25, Z
+     3f2:	89 2b       	or	r24, r25
+     3f4:	80 83       	st	Z, r24
+     3f6:	08 95       	ret
+
+000003f8 <_Z22timer1_set_normal_modev>:
+     3f8:	e0 e8       	ldi	r30, 0x80	; 128
+     3fa:	f0 e0       	ldi	r31, 0x00	; 0
+     3fc:	80 81       	ld	r24, Z
+     3fe:	8c 7f       	andi	r24, 0xFC	; 252
+     400:	80 83       	st	Z, r24
+     402:	a1 e8       	ldi	r26, 0x81	; 129
+     404:	b0 e0       	ldi	r27, 0x00	; 0
+     406:	8c 91       	ld	r24, X
+     408:	87 7e       	andi	r24, 0xE7	; 231
+     40a:	8c 93       	st	X, r24
+     40c:	80 81       	ld	r24, Z
+     40e:	83 70       	andi	r24, 0x03	; 3
+     410:	80 83       	st	Z, r24
+     412:	80 81       	ld	r24, Z
+     414:	80 83       	st	Z, r24
+     416:	8c 91       	ld	r24, X
+     418:	8c 93       	st	X, r24
+     41a:	08 95       	ret
+
+0000041c <__vector_9>:
+volatile uint8_t echo2_high = 0;
+
+// ---------------- PCINT0 ISR (PB4/PB5) ----------------
+// Umjesto INT6 iz skripte, koristimo pin-change za port B.
+ISR(PCINT0_vect)
+{
+     41c:	1f 92       	push	r1
+     41e:	0f 92       	push	r0
+     420:	0f b6       	in	r0, 0x3f	; 63
+     422:	0f 92       	push	r0
+     424:	11 24       	eor	r1, r1
+     426:	4f 93       	push	r20
+     428:	5f 93       	push	r21
+     42a:	6f 93       	push	r22
+     42c:	7f 93       	push	r23
+     42e:	8f 93       	push	r24
+     430:	9f 93       	push	r25
+     432:	af 93       	push	r26
+     434:	bf 93       	push	r27
+    uint8_t pins = PINB;
+     436:	83 b1       	in	r24, 0x03	; 3
+
+    // Senzor 1: PB4
+    if (pins & (1<<PB4)) {
+     438:	84 ff       	sbrs	r24, 4
+     43a:	0c c0       	rjmp	.+24     	; 0x454 <__vector_9+0x38>
+        if (!echo1_high) {
+     43c:	90 91 21 01 	lds	r25, 0x0121	; 0x800121 <echo1_high>
+     440:	91 11       	cpse	r25, r1
+     442:	1f c0       	rjmp	.+62     	; 0x482 <__vector_9+0x66>
+            echo1_high = 1;      // rastu?i brid
+     444:	91 e0       	ldi	r25, 0x01	; 1
+     446:	90 93 21 01 	sts	0x0121, r25	; 0x800121 <echo1_high>
+            TCNT1 = 0;           // start mjerenja
+     44a:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7f8085>
+     44e:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7f8084>
+     452:	17 c0       	rjmp	.+46     	; 0x482 <__vector_9+0x66>
+        }
+    } else {
+        if (echo1_high) {
+     454:	90 91 21 01 	lds	r25, 0x0121	; 0x800121 <echo1_high>
+     458:	99 23       	and	r25, r25
+     45a:	99 f0       	breq	.+38     	; 0x482 <__vector_9+0x66>
+            echo1_high = 0;      // padaju?i brid
+     45c:	10 92 21 01 	sts	0x0121, r1	; 0x800121 <echo1_high>
+            broj_impulsa1 = TCNT1;
+     460:	40 91 84 00 	lds	r20, 0x0084	; 0x800084 <__TEXT_REGION_LENGTH__+0x7f8084>
+     464:	50 91 85 00 	lds	r21, 0x0085	; 0x800085 <__TEXT_REGION_LENGTH__+0x7f8085>
+     468:	60 e0       	ldi	r22, 0x00	; 0
+     46a:	70 e0       	ldi	r23, 0x00	; 0
+     46c:	40 93 28 01 	sts	0x0128, r20	; 0x800128 <broj_impulsa1>
+     470:	50 93 29 01 	sts	0x0129, r21	; 0x800129 <broj_impulsa1+0x1>
+     474:	60 93 2a 01 	sts	0x012A, r22	; 0x80012a <broj_impulsa1+0x2>
+     478:	70 93 2b 01 	sts	0x012B, r23	; 0x80012b <broj_impulsa1+0x3>
+            hcsr04_measured1 = true;
+     47c:	91 e0       	ldi	r25, 0x01	; 1
+     47e:	90 93 23 01 	sts	0x0123, r25	; 0x800123 <hcsr04_measured1>
+        }
+    }
+
+    // Senzor 2: PB5
+    if (pins & (1<<PB5)) {
+     482:	85 ff       	sbrs	r24, 5
+     484:	0c c0       	rjmp	.+24     	; 0x49e <__vector_9+0x82>
+        if (!echo2_high) {
+     486:	80 91 20 01 	lds	r24, 0x0120	; 0x800120 <echo2_high>
+     48a:	81 11       	cpse	r24, r1
+     48c:	1f c0       	rjmp	.+62     	; 0x4cc <__vector_9+0xb0>
+            echo2_high = 1;      // rastu?i brid
+     48e:	81 e0       	ldi	r24, 0x01	; 1
+     490:	80 93 20 01 	sts	0x0120, r24	; 0x800120 <echo2_high>
+            TCNT1 = 0;           // start mjerenja
+     494:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7f8085>
+     498:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7f8084>
+     49c:	17 c0       	rjmp	.+46     	; 0x4cc <__vector_9+0xb0>
+        }
+    } else {
+        if (echo2_high) {
+     49e:	80 91 20 01 	lds	r24, 0x0120	; 0x800120 <echo2_high>
+     4a2:	88 23       	and	r24, r24
+     4a4:	99 f0       	breq	.+38     	; 0x4cc <__vector_9+0xb0>
+            echo2_high = 0;      // padaju?i brid
+     4a6:	10 92 20 01 	sts	0x0120, r1	; 0x800120 <echo2_high>
+            broj_impulsa2 = TCNT1;
+     4aa:	80 91 84 00 	lds	r24, 0x0084	; 0x800084 <__TEXT_REGION_LENGTH__+0x7f8084>
+     4ae:	90 91 85 00 	lds	r25, 0x0085	; 0x800085 <__TEXT_REGION_LENGTH__+0x7f8085>
+     4b2:	a0 e0       	ldi	r26, 0x00	; 0
+     4b4:	b0 e0       	ldi	r27, 0x00	; 0
+     4b6:	80 93 24 01 	sts	0x0124, r24	; 0x800124 <broj_impulsa2>
+     4ba:	90 93 25 01 	sts	0x0125, r25	; 0x800125 <broj_impulsa2+0x1>
+     4be:	a0 93 26 01 	sts	0x0126, r26	; 0x800126 <broj_impulsa2+0x2>
+     4c2:	b0 93 27 01 	sts	0x0127, r27	; 0x800127 <broj_impulsa2+0x3>
+            hcsr04_measured2 = true;
+     4c6:	81 e0       	ldi	r24, 0x01	; 1
+     4c8:	80 93 22 01 	sts	0x0122, r24	; 0x800122 <hcsr04_measured2>
+        }
+    }
+}
+     4cc:	bf 91       	pop	r27
+     4ce:	af 91       	pop	r26
+     4d0:	9f 91       	pop	r25
+     4d2:	8f 91       	pop	r24
+     4d4:	7f 91       	pop	r23
+     4d6:	6f 91       	pop	r22
+     4d8:	5f 91       	pop	r21
+     4da:	4f 91       	pop	r20
+     4dc:	0f 90       	pop	r0
+     4de:	0f be       	out	0x3f, r0	; 63
+     4e0:	0f 90       	pop	r0
+     4e2:	1f 90       	pop	r1
+     4e4:	18 95       	reti
+
+000004e6 <_Z15inicijalizacijav>:
+
+// ---------------- Inicijalizacija (format iz vježbe) ----------------
+void inicijalizacija()
+{
+    lcd_init();                 // inicijalizacija LCD displeja
+     4e6:	0e 94 29 01 	call	0x252	; 0x252 <_Z8lcd_initv>
+    // adc_init();              // ako želiš T-temperaturu kasnije
+
+    // tajmer 1 u normalnom na?inu rada
+    timer1_set_normal_mode();
+     4ea:	0e 94 fc 01 	call	0x3f8	; 0x3f8 <_Z22timer1_set_normal_modev>
+    timer1_set_prescaler(TIMER1_PRESCALER_8); // F_CPU/8 (tick ? 0.5us @16MHz)
+     4ee:	82 e0       	ldi	r24, 0x02	; 2
+     4f0:	0e 94 f3 01 	call	0x3e6	; 0x3e6 <_Z20timer1_set_prescalerh>
+
+    // konfiguracija pinova za hcsr04 (TRIG na PD2 i PD3)
+    output_port(DDRD, PD2);     // TRIG1 (PD2) - izlazni pin
+     4f4:	52 9a       	sbi	0x0a, 2	; 10
+    output_port(DDRD, PD3);     // TRIG2 (PD3) - izlazni pin
+     4f6:	53 9a       	sbi	0x0a, 3	; 10
+
+    // ECHO pinovi kao ulazi (PB4, PB5)
+    input_port(DDRB, PB4);      // ECHO1 (PB4) - ulaz
+     4f8:	24 98       	cbi	0x04, 4	; 4
+    input_port(DDRB, PB5);      // ECHO2 (PB5) - ulaz
+     4fa:	25 98       	cbi	0x04, 5	; 4
+
+    // Omogu?i pin-change za PB4 i PB5 (PCINT4, PCINT5) na portu B
+    PCMSK0 |= (1<<PCINT4) | (1<<PCINT5);
+     4fc:	eb e6       	ldi	r30, 0x6B	; 107
+     4fe:	f0 e0       	ldi	r31, 0x00	; 0
+     500:	80 81       	ld	r24, Z
+     502:	80 63       	ori	r24, 0x30	; 48
+     504:	80 83       	st	Z, r24
+    PCICR  |= (1<<PCIE0);
+     506:	e8 e6       	ldi	r30, 0x68	; 104
+     508:	f0 e0       	ldi	r31, 0x00	; 0
+     50a:	80 81       	ld	r24, Z
+     50c:	81 60       	ori	r24, 0x01	; 1
+     50e:	80 83       	st	Z, r24
+#define INTERRUPT_H_
+
+#include <avr/interrupt.h>
+
+void interrupt_enable(){
+	sei();
+     510:	78 94       	sei
+     512:	08 95       	ret
+
+00000514 <_Z13hcsr04_trigg1v>:
+}
+
+// ---------------- TRIG funkcije (isti stil) ----------------
+void hcsr04_trigg1()
+{
+    set_port(PORTD, PD2, 1);
+     514:	5a 9a       	sbi	0x0b, 2	; 11
+     516:	85 e3       	ldi	r24, 0x35	; 53
+     518:	8a 95       	dec	r24
+     51a:	f1 f7       	brne	.-4      	; 0x518 <_Z13hcsr04_trigg1v+0x4>
+     51c:	00 00       	nop
+    _delay_us(10);              // ~10–20 us
+    set_port(PORTD, PD2, 0);
+     51e:	5a 98       	cbi	0x0b, 2	; 11
+     520:	08 95       	ret
+
+00000522 <_Z13hcsr04_trigg2v>:
+}
+void hcsr04_trigg2()
+{
+    set_port(PORTD, PD3, 1);
+     522:	5b 9a       	sbi	0x0b, 3	; 11
+     524:	85 e3       	ldi	r24, 0x35	; 53
+     526:	8a 95       	dec	r24
+     528:	f1 f7       	brne	.-4      	; 0x526 <_Z13hcsr04_trigg2v+0x4>
+     52a:	00 00       	nop
+    _delay_us(10);
+    set_port(PORTD, PD3, 0);
+     52c:	5b 98       	cbi	0x0b, 3	; 11
+     52e:	08 95       	ret
+
+00000530 <main>:
+}
+
+// ---------------- Glavni program ----------------
+int main(void)
+{
+    inicijalizacija();
+     530:	0e 94 73 02 	call	0x4e6	; 0x4e6 <_Z15inicijalizacijav>
+    float t_echo;                  // trajanje impulsa na Echo pinu (s)
+    uint16_t time_delay = 0;       // brojanje ~100ms
+    // uint16_t ADC_4;             // za temp. korekciju ako koristiš ADC
+    // float T, v_z;
+
+    uint8_t koji = 0;              // 0 -> triggaj senzor 1, 1 -> senzor 2
+     534:	61 2c       	mov	r6, r1
+{
+    inicijalizacija();
+
+    float d1 = 0.0f, d2 = 0.0f;    // udaljenosti u cm
+    float t_echo;                  // trajanje impulsa na Echo pinu (s)
+    uint16_t time_delay = 0;       // brojanje ~100ms
+     536:	c0 e0       	ldi	r28, 0x00	; 0
+     538:	d0 e0       	ldi	r29, 0x00	; 0
+// ---------------- Glavni program ----------------
+int main(void)
+{
+    inicijalizacija();
+
+    float d1 = 0.0f, d2 = 0.0f;    // udaljenosti u cm
+     53a:	71 2c       	mov	r7, r1
+     53c:	81 2c       	mov	r8, r1
+     53e:	91 2c       	mov	r9, r1
+     540:	41 2c       	mov	r4, r1
+     542:	a1 2c       	mov	r10, r1
+     544:	b1 2c       	mov	r11, r1
+     546:	00 e0       	ldi	r16, 0x00	; 0
+     548:	10 e0       	ldi	r17, 0x00	; 0
+    {
+        // Naizmjeni?no šalji TRIG svakih ~100ms (jednostavno, stabilno)
+        if (time_delay == 0) {
+            if (koji == 0) { hcsr04_trigg1(); }
+            else            { hcsr04_trigg2(); }
+            koji ^= 1; // prebacuj 0/1
+     54a:	55 24       	eor	r5, r5
+     54c:	53 94       	inc	r5
+
+        // LCD ispis u istom stilu
+        if (time_delay == 0) {
+            lcd_clrscr();
+            lcd_home();
+            lcd_print("d1 = %0.2f cm\n", d1);
+     54e:	0f 2e       	mov	r0, r31
+     550:	f0 e0       	ldi	r31, 0x00	; 0
+     552:	cf 2e       	mov	r12, r31
+     554:	f1 e0       	ldi	r31, 0x01	; 1
+     556:	df 2e       	mov	r13, r31
+     558:	f0 2d       	mov	r31, r0
+            lcd_print("d2 = %0.2f cm",  d2);
+     55a:	0f 2e       	mov	r0, r31
+     55c:	ff e0       	ldi	r31, 0x0F	; 15
+     55e:	ef 2e       	mov	r14, r31
+     560:	f1 e0       	ldi	r31, 0x01	; 1
+     562:	ff 2e       	mov	r15, r31
+     564:	f0 2d       	mov	r31, r0
+     566:	02 c0       	rjmp	.+4      	; 0x56c <main+0x3c>
+        }
+
+        _delay_ms(10);
+        if (time_delay > 10) {   // ~100ms
+            time_delay = 0;
+     568:	c0 e0       	ldi	r28, 0x00	; 0
+     56a:	d0 e0       	ldi	r29, 0x00	; 0
+    uint8_t koji = 0;              // 0 -> triggaj senzor 1, 1 -> senzor 2
+
+    while(1)
+    {
+        // Naizmjeni?no šalji TRIG svakih ~100ms (jednostavno, stabilno)
+        if (time_delay == 0) {
+     56c:	20 97       	sbiw	r28, 0x00	; 0
+     56e:	41 f4       	brne	.+16     	; 0x580 <main+0x50>
+            if (koji == 0) { hcsr04_trigg1(); }
+     570:	61 10       	cpse	r6, r1
+     572:	03 c0       	rjmp	.+6      	; 0x57a <main+0x4a>
+     574:	0e 94 8a 02 	call	0x514	; 0x514 <_Z13hcsr04_trigg1v>
+     578:	02 c0       	rjmp	.+4      	; 0x57e <main+0x4e>
+            else            { hcsr04_trigg2(); }
+     57a:	0e 94 91 02 	call	0x522	; 0x522 <_Z13hcsr04_trigg2v>
+            koji ^= 1; // prebacuj 0/1
+     57e:	65 24       	eor	r6, r5
+        }
+
+        // Ako je mjerenje završeno za senzor 1
+        if (hcsr04_measured1) {
+     580:	20 91 23 01 	lds	r18, 0x0123	; 0x800123 <hcsr04_measured1>
+     584:	22 23       	and	r18, r18
+     586:	71 f1       	breq	.+92     	; 0x5e4 <main+0xb4>
+            // t_echo = broj_impulsa * PRESCALER / F_CPU (kao u skripti)
+            t_echo = (float)broj_impulsa1 * 8.0f / (float)F_CPU;  // s
+     588:	60 91 28 01 	lds	r22, 0x0128	; 0x800128 <broj_impulsa1>
+     58c:	70 91 29 01 	lds	r23, 0x0129	; 0x800129 <broj_impulsa1+0x1>
+     590:	80 91 2a 01 	lds	r24, 0x012A	; 0x80012a <broj_impulsa1+0x2>
+     594:	90 91 2b 01 	lds	r25, 0x012B	; 0x80012b <broj_impulsa1+0x3>
+            // v_z = 343.0f;  // m/s (bez korekcije)
+            // d1 = t_echo / 2 * v_z * 100;
+            d1 = (t_echo / 2.0f) * 343.0f * 100.0f;
+     598:	0e 94 c7 03 	call	0x78e	; 0x78e <__floatunsisf>
+     59c:	20 e0       	ldi	r18, 0x00	; 0
+     59e:	30 e0       	ldi	r19, 0x00	; 0
+     5a0:	40 e0       	ldi	r20, 0x00	; 0
+     5a2:	51 e4       	ldi	r21, 0x41	; 65
+     5a4:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     5a8:	20 e0       	ldi	r18, 0x00	; 0
+     5aa:	34 e2       	ldi	r19, 0x24	; 36
+     5ac:	44 e7       	ldi	r20, 0x74	; 116
+     5ae:	5b e4       	ldi	r21, 0x4B	; 75
+     5b0:	0e 94 55 03 	call	0x6aa	; 0x6aa <__divsf3>
+     5b4:	20 e0       	ldi	r18, 0x00	; 0
+     5b6:	30 e0       	ldi	r19, 0x00	; 0
+     5b8:	40 e0       	ldi	r20, 0x00	; 0
+     5ba:	5f e3       	ldi	r21, 0x3F	; 63
+     5bc:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     5c0:	20 e0       	ldi	r18, 0x00	; 0
+     5c2:	30 e8       	ldi	r19, 0x80	; 128
+     5c4:	4b ea       	ldi	r20, 0xAB	; 171
+     5c6:	53 e4       	ldi	r21, 0x43	; 67
+     5c8:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     5cc:	20 e0       	ldi	r18, 0x00	; 0
+     5ce:	30 e0       	ldi	r19, 0x00	; 0
+     5d0:	48 ec       	ldi	r20, 0xC8	; 200
+     5d2:	52 e4       	ldi	r21, 0x42	; 66
+     5d4:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     5d8:	a6 2e       	mov	r10, r22
+     5da:	b7 2e       	mov	r11, r23
+     5dc:	08 2f       	mov	r16, r24
+     5de:	19 2f       	mov	r17, r25
+            hcsr04_measured1 = false;
+     5e0:	10 92 23 01 	sts	0x0123, r1	; 0x800123 <hcsr04_measured1>
+        }
+
+        // Ako je mjerenje završeno za senzor 2
+        if (hcsr04_measured2) {
+     5e4:	20 91 22 01 	lds	r18, 0x0122	; 0x800122 <hcsr04_measured2>
+     5e8:	22 23       	and	r18, r18
+     5ea:	71 f1       	breq	.+92     	; 0x648 <main+0x118>
+            t_echo = (float)broj_impulsa2 * 8.0f / (float)F_CPU;  // s
+     5ec:	60 91 24 01 	lds	r22, 0x0124	; 0x800124 <broj_impulsa2>
+     5f0:	70 91 25 01 	lds	r23, 0x0125	; 0x800125 <broj_impulsa2+0x1>
+     5f4:	80 91 26 01 	lds	r24, 0x0126	; 0x800126 <broj_impulsa2+0x2>
+     5f8:	90 91 27 01 	lds	r25, 0x0127	; 0x800127 <broj_impulsa2+0x3>
+            d2 = (t_echo / 2.0f) * 343.0f * 100.0f;
+     5fc:	0e 94 c7 03 	call	0x78e	; 0x78e <__floatunsisf>
+     600:	20 e0       	ldi	r18, 0x00	; 0
+     602:	30 e0       	ldi	r19, 0x00	; 0
+     604:	40 e0       	ldi	r20, 0x00	; 0
+     606:	51 e4       	ldi	r21, 0x41	; 65
+     608:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     60c:	20 e0       	ldi	r18, 0x00	; 0
+     60e:	34 e2       	ldi	r19, 0x24	; 36
+     610:	44 e7       	ldi	r20, 0x74	; 116
+     612:	5b e4       	ldi	r21, 0x4B	; 75
+     614:	0e 94 55 03 	call	0x6aa	; 0x6aa <__divsf3>
+     618:	20 e0       	ldi	r18, 0x00	; 0
+     61a:	30 e0       	ldi	r19, 0x00	; 0
+     61c:	40 e0       	ldi	r20, 0x00	; 0
+     61e:	5f e3       	ldi	r21, 0x3F	; 63
+     620:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     624:	20 e0       	ldi	r18, 0x00	; 0
+     626:	30 e8       	ldi	r19, 0x80	; 128
+     628:	4b ea       	ldi	r20, 0xAB	; 171
+     62a:	53 e4       	ldi	r21, 0x43	; 67
+     62c:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     630:	20 e0       	ldi	r18, 0x00	; 0
+     632:	30 e0       	ldi	r19, 0x00	; 0
+     634:	48 ec       	ldi	r20, 0xC8	; 200
+     636:	52 e4       	ldi	r21, 0x42	; 66
+     638:	0e 94 55 04 	call	0x8aa	; 0x8aa <__mulsf3>
+     63c:	76 2e       	mov	r7, r22
+     63e:	87 2e       	mov	r8, r23
+     640:	98 2e       	mov	r9, r24
+     642:	49 2e       	mov	r4, r25
+            hcsr04_measured2 = false;
+     644:	10 92 22 01 	sts	0x0122, r1	; 0x800122 <hcsr04_measured2>
+        }
+
+        // LCD ispis u istom stilu
+        if (time_delay == 0) {
+     648:	20 97       	sbiw	r28, 0x00	; 0
+     64a:	19 f5       	brne	.+70     	; 0x692 <main+0x162>
+            lcd_clrscr();
+     64c:	0e 94 d7 01 	call	0x3ae	; 0x3ae <_Z10lcd_clrscrv>
+            lcd_home();
+     650:	0e 94 e5 01 	call	0x3ca	; 0x3ca <_Z8lcd_homev>
+            lcd_print("d1 = %0.2f cm\n", d1);
+     654:	1f 93       	push	r17
+     656:	0f 93       	push	r16
+     658:	bf 92       	push	r11
+     65a:	af 92       	push	r10
+     65c:	df 92       	push	r13
+     65e:	cf 92       	push	r12
+     660:	0e 94 b3 01 	call	0x366	; 0x366 <_Z9lcd_printPcz>
+            lcd_print("d2 = %0.2f cm",  d2);
+     664:	4f 92       	push	r4
+     666:	9f 92       	push	r9
+     668:	8f 92       	push	r8
+     66a:	7f 92       	push	r7
+     66c:	ff 92       	push	r15
+     66e:	ef 92       	push	r14
+     670:	0e 94 b3 01 	call	0x366	; 0x366 <_Z9lcd_printPcz>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     674:	8f e3       	ldi	r24, 0x3F	; 63
+     676:	9c e9       	ldi	r25, 0x9C	; 156
+     678:	01 97       	sbiw	r24, 0x01	; 1
+     67a:	f1 f7       	brne	.-4      	; 0x678 <main+0x148>
+     67c:	00 c0       	rjmp	.+0      	; 0x67e <main+0x14e>
+     67e:	00 00       	nop
+     680:	8d b7       	in	r24, 0x3d	; 61
+     682:	9e b7       	in	r25, 0x3e	; 62
+     684:	0c 96       	adiw	r24, 0x0c	; 12
+     686:	0f b6       	in	r0, 0x3f	; 63
+     688:	f8 94       	cli
+     68a:	9e bf       	out	0x3e, r25	; 62
+     68c:	0f be       	out	0x3f, r0	; 63
+     68e:	8d bf       	out	0x3d, r24	; 61
+     690:	0a c0       	rjmp	.+20     	; 0x6a6 <main+0x176>
+     692:	8f e3       	ldi	r24, 0x3F	; 63
+     694:	9c e9       	ldi	r25, 0x9C	; 156
+     696:	01 97       	sbiw	r24, 0x01	; 1
+     698:	f1 f7       	brne	.-4      	; 0x696 <main+0x166>
+     69a:	00 c0       	rjmp	.+0      	; 0x69c <main+0x16c>
+     69c:	00 00       	nop
+        }
+
+        _delay_ms(10);
+        if (time_delay > 10) {   // ~100ms
+     69e:	cb 30       	cpi	r28, 0x0B	; 11
+     6a0:	d1 05       	cpc	r29, r1
+     6a2:	08 f0       	brcs	.+2      	; 0x6a6 <main+0x176>
+     6a4:	61 cf       	rjmp	.-318    	; 0x568 <main+0x38>
+            time_delay = 0;
+        } else {
+			time_delay++;
+     6a6:	21 96       	adiw	r28, 0x01	; 1
+     6a8:	61 cf       	rjmp	.-318    	; 0x56c <main+0x3c>
+
+000006aa <__divsf3>:
+     6aa:	0e 94 69 03 	call	0x6d2	; 0x6d2 <__divsf3x>
+     6ae:	0c 94 1b 04 	jmp	0x836	; 0x836 <__fp_round>
+     6b2:	0e 94 14 04 	call	0x828	; 0x828 <__fp_pscB>
+     6b6:	58 f0       	brcs	.+22     	; 0x6ce <__divsf3+0x24>
+     6b8:	0e 94 0d 04 	call	0x81a	; 0x81a <__fp_pscA>
+     6bc:	40 f0       	brcs	.+16     	; 0x6ce <__divsf3+0x24>
+     6be:	29 f4       	brne	.+10     	; 0x6ca <__divsf3+0x20>
+     6c0:	5f 3f       	cpi	r21, 0xFF	; 255
+     6c2:	29 f0       	breq	.+10     	; 0x6ce <__divsf3+0x24>
+     6c4:	0c 94 04 04 	jmp	0x808	; 0x808 <__fp_inf>
+     6c8:	51 11       	cpse	r21, r1
+     6ca:	0c 94 4f 04 	jmp	0x89e	; 0x89e <__fp_szero>
+     6ce:	0c 94 0a 04 	jmp	0x814	; 0x814 <__fp_nan>
+
+000006d2 <__divsf3x>:
+     6d2:	0e 94 2c 04 	call	0x858	; 0x858 <__fp_split3>
+     6d6:	68 f3       	brcs	.-38     	; 0x6b2 <__divsf3+0x8>
+
+000006d8 <__divsf3_pse>:
+     6d8:	99 23       	and	r25, r25
+     6da:	b1 f3       	breq	.-20     	; 0x6c8 <__divsf3+0x1e>
+     6dc:	55 23       	and	r21, r21
+     6de:	91 f3       	breq	.-28     	; 0x6c4 <__divsf3+0x1a>
+     6e0:	95 1b       	sub	r25, r21
+     6e2:	55 0b       	sbc	r21, r21
+     6e4:	bb 27       	eor	r27, r27
+     6e6:	aa 27       	eor	r26, r26
+     6e8:	62 17       	cp	r22, r18
+     6ea:	73 07       	cpc	r23, r19
+     6ec:	84 07       	cpc	r24, r20
+     6ee:	38 f0       	brcs	.+14     	; 0x6fe <__divsf3_pse+0x26>
+     6f0:	9f 5f       	subi	r25, 0xFF	; 255
+     6f2:	5f 4f       	sbci	r21, 0xFF	; 255
+     6f4:	22 0f       	add	r18, r18
+     6f6:	33 1f       	adc	r19, r19
+     6f8:	44 1f       	adc	r20, r20
+     6fa:	aa 1f       	adc	r26, r26
+     6fc:	a9 f3       	breq	.-22     	; 0x6e8 <__divsf3_pse+0x10>
+     6fe:	35 d0       	rcall	.+106    	; 0x76a <__divsf3_pse+0x92>
+     700:	0e 2e       	mov	r0, r30
+     702:	3a f0       	brmi	.+14     	; 0x712 <__divsf3_pse+0x3a>
+     704:	e0 e8       	ldi	r30, 0x80	; 128
+     706:	32 d0       	rcall	.+100    	; 0x76c <__divsf3_pse+0x94>
+     708:	91 50       	subi	r25, 0x01	; 1
+     70a:	50 40       	sbci	r21, 0x00	; 0
+     70c:	e6 95       	lsr	r30
+     70e:	00 1c       	adc	r0, r0
+     710:	ca f7       	brpl	.-14     	; 0x704 <__divsf3_pse+0x2c>
+     712:	2b d0       	rcall	.+86     	; 0x76a <__divsf3_pse+0x92>
+     714:	fe 2f       	mov	r31, r30
+     716:	29 d0       	rcall	.+82     	; 0x76a <__divsf3_pse+0x92>
+     718:	66 0f       	add	r22, r22
+     71a:	77 1f       	adc	r23, r23
+     71c:	88 1f       	adc	r24, r24
+     71e:	bb 1f       	adc	r27, r27
+     720:	26 17       	cp	r18, r22
+     722:	37 07       	cpc	r19, r23
+     724:	48 07       	cpc	r20, r24
+     726:	ab 07       	cpc	r26, r27
+     728:	b0 e8       	ldi	r27, 0x80	; 128
+     72a:	09 f0       	breq	.+2      	; 0x72e <__divsf3_pse+0x56>
+     72c:	bb 0b       	sbc	r27, r27
+     72e:	80 2d       	mov	r24, r0
+     730:	bf 01       	movw	r22, r30
+     732:	ff 27       	eor	r31, r31
+     734:	93 58       	subi	r25, 0x83	; 131
+     736:	5f 4f       	sbci	r21, 0xFF	; 255
+     738:	3a f0       	brmi	.+14     	; 0x748 <__divsf3_pse+0x70>
+     73a:	9e 3f       	cpi	r25, 0xFE	; 254
+     73c:	51 05       	cpc	r21, r1
+     73e:	78 f0       	brcs	.+30     	; 0x75e <__divsf3_pse+0x86>
+     740:	0c 94 04 04 	jmp	0x808	; 0x808 <__fp_inf>
+     744:	0c 94 4f 04 	jmp	0x89e	; 0x89e <__fp_szero>
+     748:	5f 3f       	cpi	r21, 0xFF	; 255
+     74a:	e4 f3       	brlt	.-8      	; 0x744 <__divsf3_pse+0x6c>
+     74c:	98 3e       	cpi	r25, 0xE8	; 232
+     74e:	d4 f3       	brlt	.-12     	; 0x744 <__divsf3_pse+0x6c>
+     750:	86 95       	lsr	r24
+     752:	77 95       	ror	r23
+     754:	67 95       	ror	r22
+     756:	b7 95       	ror	r27
+     758:	f7 95       	ror	r31
+     75a:	9f 5f       	subi	r25, 0xFF	; 255
+     75c:	c9 f7       	brne	.-14     	; 0x750 <__divsf3_pse+0x78>
+     75e:	88 0f       	add	r24, r24
+     760:	91 1d       	adc	r25, r1
+     762:	96 95       	lsr	r25
+     764:	87 95       	ror	r24
+     766:	97 f9       	bld	r25, 7
+     768:	08 95       	ret
+     76a:	e1 e0       	ldi	r30, 0x01	; 1
+     76c:	66 0f       	add	r22, r22
+     76e:	77 1f       	adc	r23, r23
+     770:	88 1f       	adc	r24, r24
+     772:	bb 1f       	adc	r27, r27
+     774:	62 17       	cp	r22, r18
+     776:	73 07       	cpc	r23, r19
+     778:	84 07       	cpc	r24, r20
+     77a:	ba 07       	cpc	r27, r26
+     77c:	20 f0       	brcs	.+8      	; 0x786 <__divsf3_pse+0xae>
+     77e:	62 1b       	sub	r22, r18
+     780:	73 0b       	sbc	r23, r19
+     782:	84 0b       	sbc	r24, r20
+     784:	ba 0b       	sbc	r27, r26
+     786:	ee 1f       	adc	r30, r30
+     788:	88 f7       	brcc	.-30     	; 0x76c <__divsf3_pse+0x94>
+     78a:	e0 95       	com	r30
+     78c:	08 95       	ret
+
+0000078e <__floatunsisf>:
+     78e:	e8 94       	clt
+     790:	09 c0       	rjmp	.+18     	; 0x7a4 <__floatsisf+0x12>
+
+00000792 <__floatsisf>:
+     792:	97 fb       	bst	r25, 7
+     794:	3e f4       	brtc	.+14     	; 0x7a4 <__floatsisf+0x12>
+     796:	90 95       	com	r25
+     798:	80 95       	com	r24
+     79a:	70 95       	com	r23
+     79c:	61 95       	neg	r22
+     79e:	7f 4f       	sbci	r23, 0xFF	; 255
+     7a0:	8f 4f       	sbci	r24, 0xFF	; 255
+     7a2:	9f 4f       	sbci	r25, 0xFF	; 255
+     7a4:	99 23       	and	r25, r25
+     7a6:	a9 f0       	breq	.+42     	; 0x7d2 <__floatsisf+0x40>
+     7a8:	f9 2f       	mov	r31, r25
+     7aa:	96 e9       	ldi	r25, 0x96	; 150
+     7ac:	bb 27       	eor	r27, r27
+     7ae:	93 95       	inc	r25
+     7b0:	f6 95       	lsr	r31
+     7b2:	87 95       	ror	r24
+     7b4:	77 95       	ror	r23
+     7b6:	67 95       	ror	r22
+     7b8:	b7 95       	ror	r27
+     7ba:	f1 11       	cpse	r31, r1
+     7bc:	f8 cf       	rjmp	.-16     	; 0x7ae <__floatsisf+0x1c>
+     7be:	fa f4       	brpl	.+62     	; 0x7fe <__floatsisf+0x6c>
+     7c0:	bb 0f       	add	r27, r27
+     7c2:	11 f4       	brne	.+4      	; 0x7c8 <__floatsisf+0x36>
+     7c4:	60 ff       	sbrs	r22, 0
+     7c6:	1b c0       	rjmp	.+54     	; 0x7fe <__floatsisf+0x6c>
+     7c8:	6f 5f       	subi	r22, 0xFF	; 255
+     7ca:	7f 4f       	sbci	r23, 0xFF	; 255
+     7cc:	8f 4f       	sbci	r24, 0xFF	; 255
+     7ce:	9f 4f       	sbci	r25, 0xFF	; 255
+     7d0:	16 c0       	rjmp	.+44     	; 0x7fe <__floatsisf+0x6c>
+     7d2:	88 23       	and	r24, r24
+     7d4:	11 f0       	breq	.+4      	; 0x7da <__floatsisf+0x48>
+     7d6:	96 e9       	ldi	r25, 0x96	; 150
+     7d8:	11 c0       	rjmp	.+34     	; 0x7fc <__floatsisf+0x6a>
+     7da:	77 23       	and	r23, r23
+     7dc:	21 f0       	breq	.+8      	; 0x7e6 <__floatsisf+0x54>
+     7de:	9e e8       	ldi	r25, 0x8E	; 142
+     7e0:	87 2f       	mov	r24, r23
+     7e2:	76 2f       	mov	r23, r22
+     7e4:	05 c0       	rjmp	.+10     	; 0x7f0 <__floatsisf+0x5e>
+     7e6:	66 23       	and	r22, r22
+     7e8:	71 f0       	breq	.+28     	; 0x806 <__floatsisf+0x74>
+     7ea:	96 e8       	ldi	r25, 0x86	; 134
+     7ec:	86 2f       	mov	r24, r22
+     7ee:	70 e0       	ldi	r23, 0x00	; 0
+     7f0:	60 e0       	ldi	r22, 0x00	; 0
+     7f2:	2a f0       	brmi	.+10     	; 0x7fe <__floatsisf+0x6c>
+     7f4:	9a 95       	dec	r25
+     7f6:	66 0f       	add	r22, r22
+     7f8:	77 1f       	adc	r23, r23
+     7fa:	88 1f       	adc	r24, r24
+     7fc:	da f7       	brpl	.-10     	; 0x7f4 <__floatsisf+0x62>
+     7fe:	88 0f       	add	r24, r24
+     800:	96 95       	lsr	r25
+     802:	87 95       	ror	r24
+     804:	97 f9       	bld	r25, 7
+     806:	08 95       	ret
+
+00000808 <__fp_inf>:
+     808:	97 f9       	bld	r25, 7
+     80a:	9f 67       	ori	r25, 0x7F	; 127
+     80c:	80 e8       	ldi	r24, 0x80	; 128
+     80e:	70 e0       	ldi	r23, 0x00	; 0
+     810:	60 e0       	ldi	r22, 0x00	; 0
+     812:	08 95       	ret
+
+00000814 <__fp_nan>:
+     814:	9f ef       	ldi	r25, 0xFF	; 255
+     816:	80 ec       	ldi	r24, 0xC0	; 192
+     818:	08 95       	ret
+
+0000081a <__fp_pscA>:
+     81a:	00 24       	eor	r0, r0
+     81c:	0a 94       	dec	r0
+     81e:	16 16       	cp	r1, r22
+     820:	17 06       	cpc	r1, r23
+     822:	18 06       	cpc	r1, r24
+     824:	09 06       	cpc	r0, r25
+     826:	08 95       	ret
+
+00000828 <__fp_pscB>:
+     828:	00 24       	eor	r0, r0
+     82a:	0a 94       	dec	r0
+     82c:	12 16       	cp	r1, r18
+     82e:	13 06       	cpc	r1, r19
+     830:	14 06       	cpc	r1, r20
+     832:	05 06       	cpc	r0, r21
+     834:	08 95       	ret
+
+00000836 <__fp_round>:
+     836:	09 2e       	mov	r0, r25
+     838:	03 94       	inc	r0
+     83a:	00 0c       	add	r0, r0
+     83c:	11 f4       	brne	.+4      	; 0x842 <__fp_round+0xc>
+     83e:	88 23       	and	r24, r24
+     840:	52 f0       	brmi	.+20     	; 0x856 <__fp_round+0x20>
+     842:	bb 0f       	add	r27, r27
+     844:	40 f4       	brcc	.+16     	; 0x856 <__fp_round+0x20>
+     846:	bf 2b       	or	r27, r31
+     848:	11 f4       	brne	.+4      	; 0x84e <__fp_round+0x18>
+     84a:	60 ff       	sbrs	r22, 0
+     84c:	04 c0       	rjmp	.+8      	; 0x856 <__fp_round+0x20>
+     84e:	6f 5f       	subi	r22, 0xFF	; 255
+     850:	7f 4f       	sbci	r23, 0xFF	; 255
+     852:	8f 4f       	sbci	r24, 0xFF	; 255
+     854:	9f 4f       	sbci	r25, 0xFF	; 255
+     856:	08 95       	ret
+
+00000858 <__fp_split3>:
+     858:	57 fd       	sbrc	r21, 7
+     85a:	90 58       	subi	r25, 0x80	; 128
+     85c:	44 0f       	add	r20, r20
+     85e:	55 1f       	adc	r21, r21
+     860:	59 f0       	breq	.+22     	; 0x878 <__fp_splitA+0x10>
+     862:	5f 3f       	cpi	r21, 0xFF	; 255
+     864:	71 f0       	breq	.+28     	; 0x882 <__fp_splitA+0x1a>
+     866:	47 95       	ror	r20
+
+00000868 <__fp_splitA>:
+     868:	88 0f       	add	r24, r24
+     86a:	97 fb       	bst	r25, 7
+     86c:	99 1f       	adc	r25, r25
+     86e:	61 f0       	breq	.+24     	; 0x888 <__fp_splitA+0x20>
+     870:	9f 3f       	cpi	r25, 0xFF	; 255
+     872:	79 f0       	breq	.+30     	; 0x892 <__fp_splitA+0x2a>
+     874:	87 95       	ror	r24
+     876:	08 95       	ret
+     878:	12 16       	cp	r1, r18
+     87a:	13 06       	cpc	r1, r19
+     87c:	14 06       	cpc	r1, r20
+     87e:	55 1f       	adc	r21, r21
+     880:	f2 cf       	rjmp	.-28     	; 0x866 <__fp_split3+0xe>
+     882:	46 95       	lsr	r20
+     884:	f1 df       	rcall	.-30     	; 0x868 <__fp_splitA>
+     886:	08 c0       	rjmp	.+16     	; 0x898 <__fp_splitA+0x30>
+     888:	16 16       	cp	r1, r22
+     88a:	17 06       	cpc	r1, r23
+     88c:	18 06       	cpc	r1, r24
+     88e:	99 1f       	adc	r25, r25
+     890:	f1 cf       	rjmp	.-30     	; 0x874 <__fp_splitA+0xc>
+     892:	86 95       	lsr	r24
+     894:	71 05       	cpc	r23, r1
+     896:	61 05       	cpc	r22, r1
+     898:	08 94       	sec
+     89a:	08 95       	ret
+
+0000089c <__fp_zero>:
+     89c:	e8 94       	clt
+
+0000089e <__fp_szero>:
+     89e:	bb 27       	eor	r27, r27
+     8a0:	66 27       	eor	r22, r22
+     8a2:	77 27       	eor	r23, r23
+     8a4:	cb 01       	movw	r24, r22
+     8a6:	97 f9       	bld	r25, 7
+     8a8:	08 95       	ret
+
+000008aa <__mulsf3>:
+     8aa:	0e 94 68 04 	call	0x8d0	; 0x8d0 <__mulsf3x>
+     8ae:	0c 94 1b 04 	jmp	0x836	; 0x836 <__fp_round>
+     8b2:	0e 94 0d 04 	call	0x81a	; 0x81a <__fp_pscA>
+     8b6:	38 f0       	brcs	.+14     	; 0x8c6 <__mulsf3+0x1c>
+     8b8:	0e 94 14 04 	call	0x828	; 0x828 <__fp_pscB>
+     8bc:	20 f0       	brcs	.+8      	; 0x8c6 <__mulsf3+0x1c>
+     8be:	95 23       	and	r25, r21
+     8c0:	11 f0       	breq	.+4      	; 0x8c6 <__mulsf3+0x1c>
+     8c2:	0c 94 04 04 	jmp	0x808	; 0x808 <__fp_inf>
+     8c6:	0c 94 0a 04 	jmp	0x814	; 0x814 <__fp_nan>
+     8ca:	11 24       	eor	r1, r1
+     8cc:	0c 94 4f 04 	jmp	0x89e	; 0x89e <__fp_szero>
+
+000008d0 <__mulsf3x>:
+     8d0:	0e 94 2c 04 	call	0x858	; 0x858 <__fp_split3>
+     8d4:	70 f3       	brcs	.-36     	; 0x8b2 <__mulsf3+0x8>
+
+000008d6 <__mulsf3_pse>:
+     8d6:	95 9f       	mul	r25, r21
+     8d8:	c1 f3       	breq	.-16     	; 0x8ca <__mulsf3+0x20>
+     8da:	95 0f       	add	r25, r21
+     8dc:	50 e0       	ldi	r21, 0x00	; 0
+     8de:	55 1f       	adc	r21, r21
+     8e0:	62 9f       	mul	r22, r18
+     8e2:	f0 01       	movw	r30, r0
+     8e4:	72 9f       	mul	r23, r18
+     8e6:	bb 27       	eor	r27, r27
+     8e8:	f0 0d       	add	r31, r0
+     8ea:	b1 1d       	adc	r27, r1
+     8ec:	63 9f       	mul	r22, r19
+     8ee:	aa 27       	eor	r26, r26
+     8f0:	f0 0d       	add	r31, r0
+     8f2:	b1 1d       	adc	r27, r1
+     8f4:	aa 1f       	adc	r26, r26
+     8f6:	64 9f       	mul	r22, r20
+     8f8:	66 27       	eor	r22, r22
+     8fa:	b0 0d       	add	r27, r0
+     8fc:	a1 1d       	adc	r26, r1
+     8fe:	66 1f       	adc	r22, r22
+     900:	82 9f       	mul	r24, r18
+     902:	22 27       	eor	r18, r18
+     904:	b0 0d       	add	r27, r0
+     906:	a1 1d       	adc	r26, r1
+     908:	62 1f       	adc	r22, r18
+     90a:	73 9f       	mul	r23, r19
+     90c:	b0 0d       	add	r27, r0
+     90e:	a1 1d       	adc	r26, r1
+     910:	62 1f       	adc	r22, r18
+     912:	83 9f       	mul	r24, r19
+     914:	a0 0d       	add	r26, r0
+     916:	61 1d       	adc	r22, r1
+     918:	22 1f       	adc	r18, r18
+     91a:	74 9f       	mul	r23, r20
+     91c:	33 27       	eor	r19, r19
+     91e:	a0 0d       	add	r26, r0
+     920:	61 1d       	adc	r22, r1
+     922:	23 1f       	adc	r18, r19
+     924:	84 9f       	mul	r24, r20
+     926:	60 0d       	add	r22, r0
+     928:	21 1d       	adc	r18, r1
+     92a:	82 2f       	mov	r24, r18
+     92c:	76 2f       	mov	r23, r22
+     92e:	6a 2f       	mov	r22, r26
+     930:	11 24       	eor	r1, r1
+     932:	9f 57       	subi	r25, 0x7F	; 127
+     934:	50 40       	sbci	r21, 0x00	; 0
+     936:	9a f0       	brmi	.+38     	; 0x95e <__mulsf3_pse+0x88>
+     938:	f1 f0       	breq	.+60     	; 0x976 <__mulsf3_pse+0xa0>
+     93a:	88 23       	and	r24, r24
+     93c:	4a f0       	brmi	.+18     	; 0x950 <__mulsf3_pse+0x7a>
+     93e:	ee 0f       	add	r30, r30
+     940:	ff 1f       	adc	r31, r31
+     942:	bb 1f       	adc	r27, r27
+     944:	66 1f       	adc	r22, r22
+     946:	77 1f       	adc	r23, r23
+     948:	88 1f       	adc	r24, r24
+     94a:	91 50       	subi	r25, 0x01	; 1
+     94c:	50 40       	sbci	r21, 0x00	; 0
+     94e:	a9 f7       	brne	.-22     	; 0x93a <__mulsf3_pse+0x64>
+     950:	9e 3f       	cpi	r25, 0xFE	; 254
+     952:	51 05       	cpc	r21, r1
+     954:	80 f0       	brcs	.+32     	; 0x976 <__mulsf3_pse+0xa0>
+     956:	0c 94 04 04 	jmp	0x808	; 0x808 <__fp_inf>
+     95a:	0c 94 4f 04 	jmp	0x89e	; 0x89e <__fp_szero>
+     95e:	5f 3f       	cpi	r21, 0xFF	; 255
+     960:	e4 f3       	brlt	.-8      	; 0x95a <__mulsf3_pse+0x84>
+     962:	98 3e       	cpi	r25, 0xE8	; 232
+     964:	d4 f3       	brlt	.-12     	; 0x95a <__mulsf3_pse+0x84>
+     966:	86 95       	lsr	r24
+     968:	77 95       	ror	r23
+     96a:	67 95       	ror	r22
+     96c:	b7 95       	ror	r27
+     96e:	f7 95       	ror	r31
+     970:	e7 95       	ror	r30
+     972:	9f 5f       	subi	r25, 0xFF	; 255
+     974:	c1 f7       	brne	.-16     	; 0x966 <__mulsf3_pse+0x90>
+     976:	fe 2b       	or	r31, r30
+     978:	88 0f       	add	r24, r24
+     97a:	91 1d       	adc	r25, r1
+     97c:	96 95       	lsr	r25
+     97e:	87 95       	ror	r24
+     980:	97 f9       	bld	r25, 7
+     982:	08 95       	ret
+
+00000984 <vfprintf>:
+     984:	a0 e1       	ldi	r26, 0x10	; 16
+     986:	b0 e0       	ldi	r27, 0x00	; 0
+     988:	e8 ec       	ldi	r30, 0xC8	; 200
+     98a:	f4 e0       	ldi	r31, 0x04	; 4
+     98c:	0c 94 3f 08 	jmp	0x107e	; 0x107e <__prologue_saves__>
+     990:	7c 01       	movw	r14, r24
+     992:	1b 01       	movw	r2, r22
+     994:	6a 01       	movw	r12, r20
+     996:	fc 01       	movw	r30, r24
+     998:	17 82       	std	Z+7, r1	; 0x07
+     99a:	16 82       	std	Z+6, r1	; 0x06
+     99c:	83 81       	ldd	r24, Z+3	; 0x03
+     99e:	81 ff       	sbrs	r24, 1
+     9a0:	44 c3       	rjmp	.+1672   	; 0x102a <__stack+0x52b>
+     9a2:	9e 01       	movw	r18, r28
+     9a4:	2f 5f       	subi	r18, 0xFF	; 255
+     9a6:	3f 4f       	sbci	r19, 0xFF	; 255
+     9a8:	39 01       	movw	r6, r18
+     9aa:	f7 01       	movw	r30, r14
+     9ac:	93 81       	ldd	r25, Z+3	; 0x03
+     9ae:	f1 01       	movw	r30, r2
+     9b0:	93 fd       	sbrc	r25, 3
+     9b2:	85 91       	lpm	r24, Z+
+     9b4:	93 ff       	sbrs	r25, 3
+     9b6:	81 91       	ld	r24, Z+
+     9b8:	1f 01       	movw	r2, r30
+     9ba:	88 23       	and	r24, r24
+     9bc:	09 f4       	brne	.+2      	; 0x9c0 <vfprintf+0x3c>
+     9be:	31 c3       	rjmp	.+1634   	; 0x1022 <__stack+0x523>
+     9c0:	85 32       	cpi	r24, 0x25	; 37
+     9c2:	39 f4       	brne	.+14     	; 0x9d2 <vfprintf+0x4e>
+     9c4:	93 fd       	sbrc	r25, 3
+     9c6:	85 91       	lpm	r24, Z+
+     9c8:	93 ff       	sbrs	r25, 3
+     9ca:	81 91       	ld	r24, Z+
+     9cc:	1f 01       	movw	r2, r30
+     9ce:	85 32       	cpi	r24, 0x25	; 37
+     9d0:	39 f4       	brne	.+14     	; 0x9e0 <vfprintf+0x5c>
+     9d2:	b7 01       	movw	r22, r14
+     9d4:	90 e0       	ldi	r25, 0x00	; 0
+     9d6:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     9da:	56 01       	movw	r10, r12
+     9dc:	65 01       	movw	r12, r10
+     9de:	e5 cf       	rjmp	.-54     	; 0x9aa <vfprintf+0x26>
+     9e0:	10 e0       	ldi	r17, 0x00	; 0
+     9e2:	51 2c       	mov	r5, r1
+     9e4:	91 2c       	mov	r9, r1
+     9e6:	ff e1       	ldi	r31, 0x1F	; 31
+     9e8:	f9 15       	cp	r31, r9
+     9ea:	d8 f0       	brcs	.+54     	; 0xa22 <__DATA_REGION_LENGTH__+0x22>
+     9ec:	8b 32       	cpi	r24, 0x2B	; 43
+     9ee:	79 f0       	breq	.+30     	; 0xa0e <__DATA_REGION_LENGTH__+0xe>
+     9f0:	38 f4       	brcc	.+14     	; 0xa00 <__DATA_REGION_LENGTH__>
+     9f2:	80 32       	cpi	r24, 0x20	; 32
+     9f4:	79 f0       	breq	.+30     	; 0xa14 <__DATA_REGION_LENGTH__+0x14>
+     9f6:	83 32       	cpi	r24, 0x23	; 35
+     9f8:	a1 f4       	brne	.+40     	; 0xa22 <__DATA_REGION_LENGTH__+0x22>
+     9fa:	f9 2d       	mov	r31, r9
+     9fc:	f0 61       	ori	r31, 0x10	; 16
+     9fe:	2e c0       	rjmp	.+92     	; 0xa5c <__DATA_REGION_LENGTH__+0x5c>
+     a00:	8d 32       	cpi	r24, 0x2D	; 45
+     a02:	61 f0       	breq	.+24     	; 0xa1c <__DATA_REGION_LENGTH__+0x1c>
+     a04:	80 33       	cpi	r24, 0x30	; 48
+     a06:	69 f4       	brne	.+26     	; 0xa22 <__DATA_REGION_LENGTH__+0x22>
+     a08:	29 2d       	mov	r18, r9
+     a0a:	21 60       	ori	r18, 0x01	; 1
+     a0c:	2d c0       	rjmp	.+90     	; 0xa68 <__DATA_REGION_LENGTH__+0x68>
+     a0e:	39 2d       	mov	r19, r9
+     a10:	32 60       	ori	r19, 0x02	; 2
+     a12:	93 2e       	mov	r9, r19
+     a14:	89 2d       	mov	r24, r9
+     a16:	84 60       	ori	r24, 0x04	; 4
+     a18:	98 2e       	mov	r9, r24
+     a1a:	2a c0       	rjmp	.+84     	; 0xa70 <__DATA_REGION_LENGTH__+0x70>
+     a1c:	e9 2d       	mov	r30, r9
+     a1e:	e8 60       	ori	r30, 0x08	; 8
+     a20:	15 c0       	rjmp	.+42     	; 0xa4c <__DATA_REGION_LENGTH__+0x4c>
+     a22:	97 fc       	sbrc	r9, 7
+     a24:	2d c0       	rjmp	.+90     	; 0xa80 <__DATA_REGION_LENGTH__+0x80>
+     a26:	20 ed       	ldi	r18, 0xD0	; 208
+     a28:	28 0f       	add	r18, r24
+     a2a:	2a 30       	cpi	r18, 0x0A	; 10
+     a2c:	88 f4       	brcc	.+34     	; 0xa50 <__DATA_REGION_LENGTH__+0x50>
+     a2e:	96 fe       	sbrs	r9, 6
+     a30:	06 c0       	rjmp	.+12     	; 0xa3e <__DATA_REGION_LENGTH__+0x3e>
+     a32:	3a e0       	ldi	r19, 0x0A	; 10
+     a34:	13 9f       	mul	r17, r19
+     a36:	20 0d       	add	r18, r0
+     a38:	11 24       	eor	r1, r1
+     a3a:	12 2f       	mov	r17, r18
+     a3c:	19 c0       	rjmp	.+50     	; 0xa70 <__DATA_REGION_LENGTH__+0x70>
+     a3e:	8a e0       	ldi	r24, 0x0A	; 10
+     a40:	58 9e       	mul	r5, r24
+     a42:	20 0d       	add	r18, r0
+     a44:	11 24       	eor	r1, r1
+     a46:	52 2e       	mov	r5, r18
+     a48:	e9 2d       	mov	r30, r9
+     a4a:	e0 62       	ori	r30, 0x20	; 32
+     a4c:	9e 2e       	mov	r9, r30
+     a4e:	10 c0       	rjmp	.+32     	; 0xa70 <__DATA_REGION_LENGTH__+0x70>
+     a50:	8e 32       	cpi	r24, 0x2E	; 46
+     a52:	31 f4       	brne	.+12     	; 0xa60 <__DATA_REGION_LENGTH__+0x60>
+     a54:	96 fc       	sbrc	r9, 6
+     a56:	e5 c2       	rjmp	.+1482   	; 0x1022 <__stack+0x523>
+     a58:	f9 2d       	mov	r31, r9
+     a5a:	f0 64       	ori	r31, 0x40	; 64
+     a5c:	9f 2e       	mov	r9, r31
+     a5e:	08 c0       	rjmp	.+16     	; 0xa70 <__DATA_REGION_LENGTH__+0x70>
+     a60:	8c 36       	cpi	r24, 0x6C	; 108
+     a62:	21 f4       	brne	.+8      	; 0xa6c <__DATA_REGION_LENGTH__+0x6c>
+     a64:	29 2d       	mov	r18, r9
+     a66:	20 68       	ori	r18, 0x80	; 128
+     a68:	92 2e       	mov	r9, r18
+     a6a:	02 c0       	rjmp	.+4      	; 0xa70 <__DATA_REGION_LENGTH__+0x70>
+     a6c:	88 36       	cpi	r24, 0x68	; 104
+     a6e:	41 f4       	brne	.+16     	; 0xa80 <__DATA_REGION_LENGTH__+0x80>
+     a70:	f1 01       	movw	r30, r2
+     a72:	93 fd       	sbrc	r25, 3
+     a74:	85 91       	lpm	r24, Z+
+     a76:	93 ff       	sbrs	r25, 3
+     a78:	81 91       	ld	r24, Z+
+     a7a:	1f 01       	movw	r2, r30
+     a7c:	81 11       	cpse	r24, r1
+     a7e:	b3 cf       	rjmp	.-154    	; 0x9e6 <vfprintf+0x62>
+     a80:	9b eb       	ldi	r25, 0xBB	; 187
+     a82:	98 0f       	add	r25, r24
+     a84:	93 30       	cpi	r25, 0x03	; 3
+     a86:	20 f4       	brcc	.+8      	; 0xa90 <__DATA_REGION_LENGTH__+0x90>
+     a88:	99 2d       	mov	r25, r9
+     a8a:	90 61       	ori	r25, 0x10	; 16
+     a8c:	80 5e       	subi	r24, 0xE0	; 224
+     a8e:	07 c0       	rjmp	.+14     	; 0xa9e <__DATA_REGION_LENGTH__+0x9e>
+     a90:	9b e9       	ldi	r25, 0x9B	; 155
+     a92:	98 0f       	add	r25, r24
+     a94:	93 30       	cpi	r25, 0x03	; 3
+     a96:	08 f0       	brcs	.+2      	; 0xa9a <__DATA_REGION_LENGTH__+0x9a>
+     a98:	66 c1       	rjmp	.+716    	; 0xd66 <__stack+0x267>
+     a9a:	99 2d       	mov	r25, r9
+     a9c:	9f 7e       	andi	r25, 0xEF	; 239
+     a9e:	96 ff       	sbrs	r25, 6
+     aa0:	16 e0       	ldi	r17, 0x06	; 6
+     aa2:	9f 73       	andi	r25, 0x3F	; 63
+     aa4:	99 2e       	mov	r9, r25
+     aa6:	85 36       	cpi	r24, 0x65	; 101
+     aa8:	19 f4       	brne	.+6      	; 0xab0 <__DATA_REGION_LENGTH__+0xb0>
+     aaa:	90 64       	ori	r25, 0x40	; 64
+     aac:	99 2e       	mov	r9, r25
+     aae:	08 c0       	rjmp	.+16     	; 0xac0 <__DATA_REGION_LENGTH__+0xc0>
+     ab0:	86 36       	cpi	r24, 0x66	; 102
+     ab2:	21 f4       	brne	.+8      	; 0xabc <__DATA_REGION_LENGTH__+0xbc>
+     ab4:	39 2f       	mov	r19, r25
+     ab6:	30 68       	ori	r19, 0x80	; 128
+     ab8:	93 2e       	mov	r9, r19
+     aba:	02 c0       	rjmp	.+4      	; 0xac0 <__DATA_REGION_LENGTH__+0xc0>
+     abc:	11 11       	cpse	r17, r1
+     abe:	11 50       	subi	r17, 0x01	; 1
+     ac0:	97 fe       	sbrs	r9, 7
+     ac2:	07 c0       	rjmp	.+14     	; 0xad2 <__DATA_REGION_LENGTH__+0xd2>
+     ac4:	1c 33       	cpi	r17, 0x3C	; 60
+     ac6:	50 f4       	brcc	.+20     	; 0xadc <__DATA_REGION_LENGTH__+0xdc>
+     ac8:	44 24       	eor	r4, r4
+     aca:	43 94       	inc	r4
+     acc:	41 0e       	add	r4, r17
+     ace:	27 e0       	ldi	r18, 0x07	; 7
+     ad0:	0b c0       	rjmp	.+22     	; 0xae8 <__DATA_REGION_LENGTH__+0xe8>
+     ad2:	18 30       	cpi	r17, 0x08	; 8
+     ad4:	38 f0       	brcs	.+14     	; 0xae4 <__DATA_REGION_LENGTH__+0xe4>
+     ad6:	27 e0       	ldi	r18, 0x07	; 7
+     ad8:	17 e0       	ldi	r17, 0x07	; 7
+     ada:	05 c0       	rjmp	.+10     	; 0xae6 <__DATA_REGION_LENGTH__+0xe6>
+     adc:	27 e0       	ldi	r18, 0x07	; 7
+     ade:	9c e3       	ldi	r25, 0x3C	; 60
+     ae0:	49 2e       	mov	r4, r25
+     ae2:	02 c0       	rjmp	.+4      	; 0xae8 <__DATA_REGION_LENGTH__+0xe8>
+     ae4:	21 2f       	mov	r18, r17
+     ae6:	41 2c       	mov	r4, r1
+     ae8:	56 01       	movw	r10, r12
+     aea:	84 e0       	ldi	r24, 0x04	; 4
+     aec:	a8 0e       	add	r10, r24
+     aee:	b1 1c       	adc	r11, r1
+     af0:	f6 01       	movw	r30, r12
+     af2:	60 81       	ld	r22, Z
+     af4:	71 81       	ldd	r23, Z+1	; 0x01
+     af6:	82 81       	ldd	r24, Z+2	; 0x02
+     af8:	93 81       	ldd	r25, Z+3	; 0x03
+     afa:	04 2d       	mov	r16, r4
+     afc:	a3 01       	movw	r20, r6
+     afe:	0e 94 76 08 	call	0x10ec	; 0x10ec <__ftoa_engine>
+     b02:	6c 01       	movw	r12, r24
+     b04:	f9 81       	ldd	r31, Y+1	; 0x01
+     b06:	fc 87       	std	Y+12, r31	; 0x0c
+     b08:	f0 ff       	sbrs	r31, 0
+     b0a:	02 c0       	rjmp	.+4      	; 0xb10 <__stack+0x11>
+     b0c:	f3 ff       	sbrs	r31, 3
+     b0e:	06 c0       	rjmp	.+12     	; 0xb1c <__stack+0x1d>
+     b10:	91 fc       	sbrc	r9, 1
+     b12:	06 c0       	rjmp	.+12     	; 0xb20 <__stack+0x21>
+     b14:	92 fe       	sbrs	r9, 2
+     b16:	06 c0       	rjmp	.+12     	; 0xb24 <__stack+0x25>
+     b18:	00 e2       	ldi	r16, 0x20	; 32
+     b1a:	05 c0       	rjmp	.+10     	; 0xb26 <__stack+0x27>
+     b1c:	0d e2       	ldi	r16, 0x2D	; 45
+     b1e:	03 c0       	rjmp	.+6      	; 0xb26 <__stack+0x27>
+     b20:	0b e2       	ldi	r16, 0x2B	; 43
+     b22:	01 c0       	rjmp	.+2      	; 0xb26 <__stack+0x27>
+     b24:	00 e0       	ldi	r16, 0x00	; 0
+     b26:	8c 85       	ldd	r24, Y+12	; 0x0c
+     b28:	8c 70       	andi	r24, 0x0C	; 12
+     b2a:	19 f0       	breq	.+6      	; 0xb32 <__stack+0x33>
+     b2c:	01 11       	cpse	r16, r1
+     b2e:	5a c2       	rjmp	.+1204   	; 0xfe4 <__stack+0x4e5>
+     b30:	9b c2       	rjmp	.+1334   	; 0x1068 <__stack+0x569>
+     b32:	97 fe       	sbrs	r9, 7
+     b34:	10 c0       	rjmp	.+32     	; 0xb56 <__stack+0x57>
+     b36:	4c 0c       	add	r4, r12
+     b38:	fc 85       	ldd	r31, Y+12	; 0x0c
+     b3a:	f4 ff       	sbrs	r31, 4
+     b3c:	04 c0       	rjmp	.+8      	; 0xb46 <__stack+0x47>
+     b3e:	8a 81       	ldd	r24, Y+2	; 0x02
+     b40:	81 33       	cpi	r24, 0x31	; 49
+     b42:	09 f4       	brne	.+2      	; 0xb46 <__stack+0x47>
+     b44:	4a 94       	dec	r4
+     b46:	14 14       	cp	r1, r4
+     b48:	74 f5       	brge	.+92     	; 0xba6 <__stack+0xa7>
+     b4a:	28 e0       	ldi	r18, 0x08	; 8
+     b4c:	24 15       	cp	r18, r4
+     b4e:	78 f5       	brcc	.+94     	; 0xbae <__stack+0xaf>
+     b50:	88 e0       	ldi	r24, 0x08	; 8
+     b52:	48 2e       	mov	r4, r24
+     b54:	2c c0       	rjmp	.+88     	; 0xbae <__stack+0xaf>
+     b56:	96 fc       	sbrc	r9, 6
+     b58:	2a c0       	rjmp	.+84     	; 0xbae <__stack+0xaf>
+     b5a:	81 2f       	mov	r24, r17
+     b5c:	90 e0       	ldi	r25, 0x00	; 0
+     b5e:	8c 15       	cp	r24, r12
+     b60:	9d 05       	cpc	r25, r13
+     b62:	9c f0       	brlt	.+38     	; 0xb8a <__stack+0x8b>
+     b64:	3c ef       	ldi	r19, 0xFC	; 252
+     b66:	c3 16       	cp	r12, r19
+     b68:	3f ef       	ldi	r19, 0xFF	; 255
+     b6a:	d3 06       	cpc	r13, r19
+     b6c:	74 f0       	brlt	.+28     	; 0xb8a <__stack+0x8b>
+     b6e:	89 2d       	mov	r24, r9
+     b70:	80 68       	ori	r24, 0x80	; 128
+     b72:	98 2e       	mov	r9, r24
+     b74:	0a c0       	rjmp	.+20     	; 0xb8a <__stack+0x8b>
+     b76:	e2 e0       	ldi	r30, 0x02	; 2
+     b78:	f0 e0       	ldi	r31, 0x00	; 0
+     b7a:	ec 0f       	add	r30, r28
+     b7c:	fd 1f       	adc	r31, r29
+     b7e:	e1 0f       	add	r30, r17
+     b80:	f1 1d       	adc	r31, r1
+     b82:	80 81       	ld	r24, Z
+     b84:	80 33       	cpi	r24, 0x30	; 48
+     b86:	19 f4       	brne	.+6      	; 0xb8e <__stack+0x8f>
+     b88:	11 50       	subi	r17, 0x01	; 1
+     b8a:	11 11       	cpse	r17, r1
+     b8c:	f4 cf       	rjmp	.-24     	; 0xb76 <__stack+0x77>
+     b8e:	97 fe       	sbrs	r9, 7
+     b90:	0e c0       	rjmp	.+28     	; 0xbae <__stack+0xaf>
+     b92:	44 24       	eor	r4, r4
+     b94:	43 94       	inc	r4
+     b96:	41 0e       	add	r4, r17
+     b98:	81 2f       	mov	r24, r17
+     b9a:	90 e0       	ldi	r25, 0x00	; 0
+     b9c:	c8 16       	cp	r12, r24
+     b9e:	d9 06       	cpc	r13, r25
+     ba0:	2c f4       	brge	.+10     	; 0xbac <__stack+0xad>
+     ba2:	1c 19       	sub	r17, r12
+     ba4:	04 c0       	rjmp	.+8      	; 0xbae <__stack+0xaf>
+     ba6:	44 24       	eor	r4, r4
+     ba8:	43 94       	inc	r4
+     baa:	01 c0       	rjmp	.+2      	; 0xbae <__stack+0xaf>
+     bac:	10 e0       	ldi	r17, 0x00	; 0
+     bae:	97 fe       	sbrs	r9, 7
+     bb0:	06 c0       	rjmp	.+12     	; 0xbbe <__stack+0xbf>
+     bb2:	1c 14       	cp	r1, r12
+     bb4:	1d 04       	cpc	r1, r13
+     bb6:	34 f4       	brge	.+12     	; 0xbc4 <__stack+0xc5>
+     bb8:	c6 01       	movw	r24, r12
+     bba:	01 96       	adiw	r24, 0x01	; 1
+     bbc:	05 c0       	rjmp	.+10     	; 0xbc8 <__stack+0xc9>
+     bbe:	85 e0       	ldi	r24, 0x05	; 5
+     bc0:	90 e0       	ldi	r25, 0x00	; 0
+     bc2:	02 c0       	rjmp	.+4      	; 0xbc8 <__stack+0xc9>
+     bc4:	81 e0       	ldi	r24, 0x01	; 1
+     bc6:	90 e0       	ldi	r25, 0x00	; 0
+     bc8:	01 11       	cpse	r16, r1
+     bca:	01 96       	adiw	r24, 0x01	; 1
+     bcc:	11 23       	and	r17, r17
+     bce:	31 f0       	breq	.+12     	; 0xbdc <__stack+0xdd>
+     bd0:	21 2f       	mov	r18, r17
+     bd2:	30 e0       	ldi	r19, 0x00	; 0
+     bd4:	2f 5f       	subi	r18, 0xFF	; 255
+     bd6:	3f 4f       	sbci	r19, 0xFF	; 255
+     bd8:	82 0f       	add	r24, r18
+     bda:	93 1f       	adc	r25, r19
+     bdc:	25 2d       	mov	r18, r5
+     bde:	30 e0       	ldi	r19, 0x00	; 0
+     be0:	82 17       	cp	r24, r18
+     be2:	93 07       	cpc	r25, r19
+     be4:	14 f4       	brge	.+4      	; 0xbea <__stack+0xeb>
+     be6:	58 1a       	sub	r5, r24
+     be8:	01 c0       	rjmp	.+2      	; 0xbec <__stack+0xed>
+     bea:	51 2c       	mov	r5, r1
+     bec:	89 2d       	mov	r24, r9
+     bee:	89 70       	andi	r24, 0x09	; 9
+     bf0:	49 f4       	brne	.+18     	; 0xc04 <__stack+0x105>
+     bf2:	55 20       	and	r5, r5
+     bf4:	39 f0       	breq	.+14     	; 0xc04 <__stack+0x105>
+     bf6:	b7 01       	movw	r22, r14
+     bf8:	80 e2       	ldi	r24, 0x20	; 32
+     bfa:	90 e0       	ldi	r25, 0x00	; 0
+     bfc:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     c00:	5a 94       	dec	r5
+     c02:	f7 cf       	rjmp	.-18     	; 0xbf2 <__stack+0xf3>
+     c04:	00 23       	and	r16, r16
+     c06:	29 f0       	breq	.+10     	; 0xc12 <__stack+0x113>
+     c08:	b7 01       	movw	r22, r14
+     c0a:	80 2f       	mov	r24, r16
+     c0c:	90 e0       	ldi	r25, 0x00	; 0
+     c0e:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     c12:	93 fc       	sbrc	r9, 3
+     c14:	09 c0       	rjmp	.+18     	; 0xc28 <__stack+0x129>
+     c16:	55 20       	and	r5, r5
+     c18:	39 f0       	breq	.+14     	; 0xc28 <__stack+0x129>
+     c1a:	b7 01       	movw	r22, r14
+     c1c:	80 e3       	ldi	r24, 0x30	; 48
+     c1e:	90 e0       	ldi	r25, 0x00	; 0
+     c20:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     c24:	5a 94       	dec	r5
+     c26:	f7 cf       	rjmp	.-18     	; 0xc16 <__stack+0x117>
+     c28:	97 fe       	sbrs	r9, 7
+     c2a:	4c c0       	rjmp	.+152    	; 0xcc4 <__stack+0x1c5>
+     c2c:	46 01       	movw	r8, r12
+     c2e:	d7 fe       	sbrs	r13, 7
+     c30:	02 c0       	rjmp	.+4      	; 0xc36 <__stack+0x137>
+     c32:	81 2c       	mov	r8, r1
+     c34:	91 2c       	mov	r9, r1
+     c36:	c6 01       	movw	r24, r12
+     c38:	88 19       	sub	r24, r8
+     c3a:	99 09       	sbc	r25, r9
+     c3c:	f3 01       	movw	r30, r6
+     c3e:	e8 0f       	add	r30, r24
+     c40:	f9 1f       	adc	r31, r25
+     c42:	fe 87       	std	Y+14, r31	; 0x0e
+     c44:	ed 87       	std	Y+13, r30	; 0x0d
+     c46:	96 01       	movw	r18, r12
+     c48:	24 19       	sub	r18, r4
+     c4a:	31 09       	sbc	r19, r1
+     c4c:	38 8b       	std	Y+16, r19	; 0x10
+     c4e:	2f 87       	std	Y+15, r18	; 0x0f
+     c50:	01 2f       	mov	r16, r17
+     c52:	10 e0       	ldi	r17, 0x00	; 0
+     c54:	11 95       	neg	r17
+     c56:	01 95       	neg	r16
+     c58:	11 09       	sbc	r17, r1
+     c5a:	3f ef       	ldi	r19, 0xFF	; 255
+     c5c:	83 16       	cp	r8, r19
+     c5e:	93 06       	cpc	r9, r19
+     c60:	29 f4       	brne	.+10     	; 0xc6c <__stack+0x16d>
+     c62:	b7 01       	movw	r22, r14
+     c64:	8e e2       	ldi	r24, 0x2E	; 46
+     c66:	90 e0       	ldi	r25, 0x00	; 0
+     c68:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     c6c:	c8 14       	cp	r12, r8
+     c6e:	d9 04       	cpc	r13, r9
+     c70:	4c f0       	brlt	.+18     	; 0xc84 <__stack+0x185>
+     c72:	8f 85       	ldd	r24, Y+15	; 0x0f
+     c74:	98 89       	ldd	r25, Y+16	; 0x10
+     c76:	88 15       	cp	r24, r8
+     c78:	99 05       	cpc	r25, r9
+     c7a:	24 f4       	brge	.+8      	; 0xc84 <__stack+0x185>
+     c7c:	ed 85       	ldd	r30, Y+13	; 0x0d
+     c7e:	fe 85       	ldd	r31, Y+14	; 0x0e
+     c80:	81 81       	ldd	r24, Z+1	; 0x01
+     c82:	01 c0       	rjmp	.+2      	; 0xc86 <__stack+0x187>
+     c84:	80 e3       	ldi	r24, 0x30	; 48
+     c86:	f1 e0       	ldi	r31, 0x01	; 1
+     c88:	8f 1a       	sub	r8, r31
+     c8a:	91 08       	sbc	r9, r1
+     c8c:	2d 85       	ldd	r18, Y+13	; 0x0d
+     c8e:	3e 85       	ldd	r19, Y+14	; 0x0e
+     c90:	2f 5f       	subi	r18, 0xFF	; 255
+     c92:	3f 4f       	sbci	r19, 0xFF	; 255
+     c94:	3e 87       	std	Y+14, r19	; 0x0e
+     c96:	2d 87       	std	Y+13, r18	; 0x0d
+     c98:	80 16       	cp	r8, r16
+     c9a:	91 06       	cpc	r9, r17
+     c9c:	2c f0       	brlt	.+10     	; 0xca8 <__stack+0x1a9>
+     c9e:	b7 01       	movw	r22, r14
+     ca0:	90 e0       	ldi	r25, 0x00	; 0
+     ca2:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     ca6:	d9 cf       	rjmp	.-78     	; 0xc5a <__stack+0x15b>
+     ca8:	c8 14       	cp	r12, r8
+     caa:	d9 04       	cpc	r13, r9
+     cac:	41 f4       	brne	.+16     	; 0xcbe <__stack+0x1bf>
+     cae:	9a 81       	ldd	r25, Y+2	; 0x02
+     cb0:	96 33       	cpi	r25, 0x36	; 54
+     cb2:	20 f4       	brcc	.+8      	; 0xcbc <__stack+0x1bd>
+     cb4:	95 33       	cpi	r25, 0x35	; 53
+     cb6:	19 f4       	brne	.+6      	; 0xcbe <__stack+0x1bf>
+     cb8:	3c 85       	ldd	r19, Y+12	; 0x0c
+     cba:	34 ff       	sbrs	r19, 4
+     cbc:	81 e3       	ldi	r24, 0x31	; 49
+     cbe:	b7 01       	movw	r22, r14
+     cc0:	90 e0       	ldi	r25, 0x00	; 0
+     cc2:	4e c0       	rjmp	.+156    	; 0xd60 <__stack+0x261>
+     cc4:	8a 81       	ldd	r24, Y+2	; 0x02
+     cc6:	81 33       	cpi	r24, 0x31	; 49
+     cc8:	19 f0       	breq	.+6      	; 0xcd0 <__stack+0x1d1>
+     cca:	9c 85       	ldd	r25, Y+12	; 0x0c
+     ccc:	9f 7e       	andi	r25, 0xEF	; 239
+     cce:	9c 87       	std	Y+12, r25	; 0x0c
+     cd0:	b7 01       	movw	r22, r14
+     cd2:	90 e0       	ldi	r25, 0x00	; 0
+     cd4:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     cd8:	11 11       	cpse	r17, r1
+     cda:	05 c0       	rjmp	.+10     	; 0xce6 <__stack+0x1e7>
+     cdc:	94 fc       	sbrc	r9, 4
+     cde:	18 c0       	rjmp	.+48     	; 0xd10 <__stack+0x211>
+     ce0:	85 e6       	ldi	r24, 0x65	; 101
+     ce2:	90 e0       	ldi	r25, 0x00	; 0
+     ce4:	17 c0       	rjmp	.+46     	; 0xd14 <__stack+0x215>
+     ce6:	b7 01       	movw	r22, r14
+     ce8:	8e e2       	ldi	r24, 0x2E	; 46
+     cea:	90 e0       	ldi	r25, 0x00	; 0
+     cec:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     cf0:	1e 5f       	subi	r17, 0xFE	; 254
+     cf2:	82 e0       	ldi	r24, 0x02	; 2
+     cf4:	01 e0       	ldi	r16, 0x01	; 1
+     cf6:	08 0f       	add	r16, r24
+     cf8:	f3 01       	movw	r30, r6
+     cfa:	e8 0f       	add	r30, r24
+     cfc:	f1 1d       	adc	r31, r1
+     cfe:	80 81       	ld	r24, Z
+     d00:	b7 01       	movw	r22, r14
+     d02:	90 e0       	ldi	r25, 0x00	; 0
+     d04:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     d08:	80 2f       	mov	r24, r16
+     d0a:	01 13       	cpse	r16, r17
+     d0c:	f3 cf       	rjmp	.-26     	; 0xcf4 <__stack+0x1f5>
+     d0e:	e6 cf       	rjmp	.-52     	; 0xcdc <__stack+0x1dd>
+     d10:	85 e4       	ldi	r24, 0x45	; 69
+     d12:	90 e0       	ldi	r25, 0x00	; 0
+     d14:	b7 01       	movw	r22, r14
+     d16:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     d1a:	d7 fc       	sbrc	r13, 7
+     d1c:	06 c0       	rjmp	.+12     	; 0xd2a <__stack+0x22b>
+     d1e:	c1 14       	cp	r12, r1
+     d20:	d1 04       	cpc	r13, r1
+     d22:	41 f4       	brne	.+16     	; 0xd34 <__stack+0x235>
+     d24:	ec 85       	ldd	r30, Y+12	; 0x0c
+     d26:	e4 ff       	sbrs	r30, 4
+     d28:	05 c0       	rjmp	.+10     	; 0xd34 <__stack+0x235>
+     d2a:	d1 94       	neg	r13
+     d2c:	c1 94       	neg	r12
+     d2e:	d1 08       	sbc	r13, r1
+     d30:	8d e2       	ldi	r24, 0x2D	; 45
+     d32:	01 c0       	rjmp	.+2      	; 0xd36 <__stack+0x237>
+     d34:	8b e2       	ldi	r24, 0x2B	; 43
+     d36:	b7 01       	movw	r22, r14
+     d38:	90 e0       	ldi	r25, 0x00	; 0
+     d3a:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     d3e:	80 e3       	ldi	r24, 0x30	; 48
+     d40:	2a e0       	ldi	r18, 0x0A	; 10
+     d42:	c2 16       	cp	r12, r18
+     d44:	d1 04       	cpc	r13, r1
+     d46:	2c f0       	brlt	.+10     	; 0xd52 <__stack+0x253>
+     d48:	8f 5f       	subi	r24, 0xFF	; 255
+     d4a:	fa e0       	ldi	r31, 0x0A	; 10
+     d4c:	cf 1a       	sub	r12, r31
+     d4e:	d1 08       	sbc	r13, r1
+     d50:	f7 cf       	rjmp	.-18     	; 0xd40 <__stack+0x241>
+     d52:	b7 01       	movw	r22, r14
+     d54:	90 e0       	ldi	r25, 0x00	; 0
+     d56:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     d5a:	b7 01       	movw	r22, r14
+     d5c:	c6 01       	movw	r24, r12
+     d5e:	c0 96       	adiw	r24, 0x30	; 48
+     d60:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     d64:	54 c1       	rjmp	.+680    	; 0x100e <__stack+0x50f>
+     d66:	83 36       	cpi	r24, 0x63	; 99
+     d68:	31 f0       	breq	.+12     	; 0xd76 <__stack+0x277>
+     d6a:	83 37       	cpi	r24, 0x73	; 115
+     d6c:	79 f0       	breq	.+30     	; 0xd8c <__stack+0x28d>
+     d6e:	83 35       	cpi	r24, 0x53	; 83
+     d70:	09 f0       	breq	.+2      	; 0xd74 <__stack+0x275>
+     d72:	56 c0       	rjmp	.+172    	; 0xe20 <__stack+0x321>
+     d74:	20 c0       	rjmp	.+64     	; 0xdb6 <__stack+0x2b7>
+     d76:	56 01       	movw	r10, r12
+     d78:	32 e0       	ldi	r19, 0x02	; 2
+     d7a:	a3 0e       	add	r10, r19
+     d7c:	b1 1c       	adc	r11, r1
+     d7e:	f6 01       	movw	r30, r12
+     d80:	80 81       	ld	r24, Z
+     d82:	89 83       	std	Y+1, r24	; 0x01
+     d84:	01 e0       	ldi	r16, 0x01	; 1
+     d86:	10 e0       	ldi	r17, 0x00	; 0
+     d88:	63 01       	movw	r12, r6
+     d8a:	12 c0       	rjmp	.+36     	; 0xdb0 <__stack+0x2b1>
+     d8c:	56 01       	movw	r10, r12
+     d8e:	f2 e0       	ldi	r31, 0x02	; 2
+     d90:	af 0e       	add	r10, r31
+     d92:	b1 1c       	adc	r11, r1
+     d94:	f6 01       	movw	r30, r12
+     d96:	c0 80       	ld	r12, Z
+     d98:	d1 80       	ldd	r13, Z+1	; 0x01
+     d9a:	96 fe       	sbrs	r9, 6
+     d9c:	03 c0       	rjmp	.+6      	; 0xda4 <__stack+0x2a5>
+     d9e:	61 2f       	mov	r22, r17
+     da0:	70 e0       	ldi	r23, 0x00	; 0
+     da2:	02 c0       	rjmp	.+4      	; 0xda8 <__stack+0x2a9>
+     da4:	6f ef       	ldi	r22, 0xFF	; 255
+     da6:	7f ef       	ldi	r23, 0xFF	; 255
+     da8:	c6 01       	movw	r24, r12
+     daa:	0e 94 59 09 	call	0x12b2	; 0x12b2 <strnlen>
+     dae:	8c 01       	movw	r16, r24
+     db0:	f9 2d       	mov	r31, r9
+     db2:	ff 77       	andi	r31, 0x7F	; 127
+     db4:	14 c0       	rjmp	.+40     	; 0xdde <__stack+0x2df>
+     db6:	56 01       	movw	r10, r12
+     db8:	22 e0       	ldi	r18, 0x02	; 2
+     dba:	a2 0e       	add	r10, r18
+     dbc:	b1 1c       	adc	r11, r1
+     dbe:	f6 01       	movw	r30, r12
+     dc0:	c0 80       	ld	r12, Z
+     dc2:	d1 80       	ldd	r13, Z+1	; 0x01
+     dc4:	96 fe       	sbrs	r9, 6
+     dc6:	03 c0       	rjmp	.+6      	; 0xdce <__stack+0x2cf>
+     dc8:	61 2f       	mov	r22, r17
+     dca:	70 e0       	ldi	r23, 0x00	; 0
+     dcc:	02 c0       	rjmp	.+4      	; 0xdd2 <__stack+0x2d3>
+     dce:	6f ef       	ldi	r22, 0xFF	; 255
+     dd0:	7f ef       	ldi	r23, 0xFF	; 255
+     dd2:	c6 01       	movw	r24, r12
+     dd4:	0e 94 4e 09 	call	0x129c	; 0x129c <strnlen_P>
+     dd8:	8c 01       	movw	r16, r24
+     dda:	f9 2d       	mov	r31, r9
+     ddc:	f0 68       	ori	r31, 0x80	; 128
+     dde:	9f 2e       	mov	r9, r31
+     de0:	f3 fd       	sbrc	r31, 3
+     de2:	1a c0       	rjmp	.+52     	; 0xe18 <__stack+0x319>
+     de4:	85 2d       	mov	r24, r5
+     de6:	90 e0       	ldi	r25, 0x00	; 0
+     de8:	08 17       	cp	r16, r24
+     dea:	19 07       	cpc	r17, r25
+     dec:	a8 f4       	brcc	.+42     	; 0xe18 <__stack+0x319>
+     dee:	b7 01       	movw	r22, r14
+     df0:	80 e2       	ldi	r24, 0x20	; 32
+     df2:	90 e0       	ldi	r25, 0x00	; 0
+     df4:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     df8:	5a 94       	dec	r5
+     dfa:	f4 cf       	rjmp	.-24     	; 0xde4 <__stack+0x2e5>
+     dfc:	f6 01       	movw	r30, r12
+     dfe:	97 fc       	sbrc	r9, 7
+     e00:	85 91       	lpm	r24, Z+
+     e02:	97 fe       	sbrs	r9, 7
+     e04:	81 91       	ld	r24, Z+
+     e06:	6f 01       	movw	r12, r30
+     e08:	b7 01       	movw	r22, r14
+     e0a:	90 e0       	ldi	r25, 0x00	; 0
+     e0c:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     e10:	51 10       	cpse	r5, r1
+     e12:	5a 94       	dec	r5
+     e14:	01 50       	subi	r16, 0x01	; 1
+     e16:	11 09       	sbc	r17, r1
+     e18:	01 15       	cp	r16, r1
+     e1a:	11 05       	cpc	r17, r1
+     e1c:	79 f7       	brne	.-34     	; 0xdfc <__stack+0x2fd>
+     e1e:	f7 c0       	rjmp	.+494    	; 0x100e <__stack+0x50f>
+     e20:	84 36       	cpi	r24, 0x64	; 100
+     e22:	11 f0       	breq	.+4      	; 0xe28 <__stack+0x329>
+     e24:	89 36       	cpi	r24, 0x69	; 105
+     e26:	61 f5       	brne	.+88     	; 0xe80 <__stack+0x381>
+     e28:	56 01       	movw	r10, r12
+     e2a:	97 fe       	sbrs	r9, 7
+     e2c:	09 c0       	rjmp	.+18     	; 0xe40 <__stack+0x341>
+     e2e:	24 e0       	ldi	r18, 0x04	; 4
+     e30:	a2 0e       	add	r10, r18
+     e32:	b1 1c       	adc	r11, r1
+     e34:	f6 01       	movw	r30, r12
+     e36:	60 81       	ld	r22, Z
+     e38:	71 81       	ldd	r23, Z+1	; 0x01
+     e3a:	82 81       	ldd	r24, Z+2	; 0x02
+     e3c:	93 81       	ldd	r25, Z+3	; 0x03
+     e3e:	0a c0       	rjmp	.+20     	; 0xe54 <__stack+0x355>
+     e40:	f2 e0       	ldi	r31, 0x02	; 2
+     e42:	af 0e       	add	r10, r31
+     e44:	b1 1c       	adc	r11, r1
+     e46:	f6 01       	movw	r30, r12
+     e48:	60 81       	ld	r22, Z
+     e4a:	71 81       	ldd	r23, Z+1	; 0x01
+     e4c:	07 2e       	mov	r0, r23
+     e4e:	00 0c       	add	r0, r0
+     e50:	88 0b       	sbc	r24, r24
+     e52:	99 0b       	sbc	r25, r25
+     e54:	f9 2d       	mov	r31, r9
+     e56:	ff 76       	andi	r31, 0x6F	; 111
+     e58:	9f 2e       	mov	r9, r31
+     e5a:	97 ff       	sbrs	r25, 7
+     e5c:	09 c0       	rjmp	.+18     	; 0xe70 <__stack+0x371>
+     e5e:	90 95       	com	r25
+     e60:	80 95       	com	r24
+     e62:	70 95       	com	r23
+     e64:	61 95       	neg	r22
+     e66:	7f 4f       	sbci	r23, 0xFF	; 255
+     e68:	8f 4f       	sbci	r24, 0xFF	; 255
+     e6a:	9f 4f       	sbci	r25, 0xFF	; 255
+     e6c:	f0 68       	ori	r31, 0x80	; 128
+     e6e:	9f 2e       	mov	r9, r31
+     e70:	2a e0       	ldi	r18, 0x0A	; 10
+     e72:	30 e0       	ldi	r19, 0x00	; 0
+     e74:	a3 01       	movw	r20, r6
+     e76:	0e 94 bc 09 	call	0x1378	; 0x1378 <__ultoa_invert>
+     e7a:	c8 2e       	mov	r12, r24
+     e7c:	c6 18       	sub	r12, r6
+     e7e:	3f c0       	rjmp	.+126    	; 0xefe <__stack+0x3ff>
+     e80:	09 2d       	mov	r16, r9
+     e82:	85 37       	cpi	r24, 0x75	; 117
+     e84:	21 f4       	brne	.+8      	; 0xe8e <__stack+0x38f>
+     e86:	0f 7e       	andi	r16, 0xEF	; 239
+     e88:	2a e0       	ldi	r18, 0x0A	; 10
+     e8a:	30 e0       	ldi	r19, 0x00	; 0
+     e8c:	1d c0       	rjmp	.+58     	; 0xec8 <__stack+0x3c9>
+     e8e:	09 7f       	andi	r16, 0xF9	; 249
+     e90:	8f 36       	cpi	r24, 0x6F	; 111
+     e92:	91 f0       	breq	.+36     	; 0xeb8 <__stack+0x3b9>
+     e94:	18 f4       	brcc	.+6      	; 0xe9c <__stack+0x39d>
+     e96:	88 35       	cpi	r24, 0x58	; 88
+     e98:	59 f0       	breq	.+22     	; 0xeb0 <__stack+0x3b1>
+     e9a:	c3 c0       	rjmp	.+390    	; 0x1022 <__stack+0x523>
+     e9c:	80 37       	cpi	r24, 0x70	; 112
+     e9e:	19 f0       	breq	.+6      	; 0xea6 <__stack+0x3a7>
+     ea0:	88 37       	cpi	r24, 0x78	; 120
+     ea2:	11 f0       	breq	.+4      	; 0xea8 <__stack+0x3a9>
+     ea4:	be c0       	rjmp	.+380    	; 0x1022 <__stack+0x523>
+     ea6:	00 61       	ori	r16, 0x10	; 16
+     ea8:	04 ff       	sbrs	r16, 4
+     eaa:	09 c0       	rjmp	.+18     	; 0xebe <__stack+0x3bf>
+     eac:	04 60       	ori	r16, 0x04	; 4
+     eae:	07 c0       	rjmp	.+14     	; 0xebe <__stack+0x3bf>
+     eb0:	94 fe       	sbrs	r9, 4
+     eb2:	08 c0       	rjmp	.+16     	; 0xec4 <__stack+0x3c5>
+     eb4:	06 60       	ori	r16, 0x06	; 6
+     eb6:	06 c0       	rjmp	.+12     	; 0xec4 <__stack+0x3c5>
+     eb8:	28 e0       	ldi	r18, 0x08	; 8
+     eba:	30 e0       	ldi	r19, 0x00	; 0
+     ebc:	05 c0       	rjmp	.+10     	; 0xec8 <__stack+0x3c9>
+     ebe:	20 e1       	ldi	r18, 0x10	; 16
+     ec0:	30 e0       	ldi	r19, 0x00	; 0
+     ec2:	02 c0       	rjmp	.+4      	; 0xec8 <__stack+0x3c9>
+     ec4:	20 e1       	ldi	r18, 0x10	; 16
+     ec6:	32 e0       	ldi	r19, 0x02	; 2
+     ec8:	56 01       	movw	r10, r12
+     eca:	07 ff       	sbrs	r16, 7
+     ecc:	09 c0       	rjmp	.+18     	; 0xee0 <__stack+0x3e1>
+     ece:	84 e0       	ldi	r24, 0x04	; 4
+     ed0:	a8 0e       	add	r10, r24
+     ed2:	b1 1c       	adc	r11, r1
+     ed4:	f6 01       	movw	r30, r12
+     ed6:	60 81       	ld	r22, Z
+     ed8:	71 81       	ldd	r23, Z+1	; 0x01
+     eda:	82 81       	ldd	r24, Z+2	; 0x02
+     edc:	93 81       	ldd	r25, Z+3	; 0x03
+     ede:	08 c0       	rjmp	.+16     	; 0xef0 <__stack+0x3f1>
+     ee0:	f2 e0       	ldi	r31, 0x02	; 2
+     ee2:	af 0e       	add	r10, r31
+     ee4:	b1 1c       	adc	r11, r1
+     ee6:	f6 01       	movw	r30, r12
+     ee8:	60 81       	ld	r22, Z
+     eea:	71 81       	ldd	r23, Z+1	; 0x01
+     eec:	80 e0       	ldi	r24, 0x00	; 0
+     eee:	90 e0       	ldi	r25, 0x00	; 0
+     ef0:	a3 01       	movw	r20, r6
+     ef2:	0e 94 bc 09 	call	0x1378	; 0x1378 <__ultoa_invert>
+     ef6:	c8 2e       	mov	r12, r24
+     ef8:	c6 18       	sub	r12, r6
+     efa:	0f 77       	andi	r16, 0x7F	; 127
+     efc:	90 2e       	mov	r9, r16
+     efe:	96 fe       	sbrs	r9, 6
+     f00:	0b c0       	rjmp	.+22     	; 0xf18 <__stack+0x419>
+     f02:	09 2d       	mov	r16, r9
+     f04:	0e 7f       	andi	r16, 0xFE	; 254
+     f06:	c1 16       	cp	r12, r17
+     f08:	50 f4       	brcc	.+20     	; 0xf1e <__stack+0x41f>
+     f0a:	94 fe       	sbrs	r9, 4
+     f0c:	0a c0       	rjmp	.+20     	; 0xf22 <__stack+0x423>
+     f0e:	92 fc       	sbrc	r9, 2
+     f10:	08 c0       	rjmp	.+16     	; 0xf22 <__stack+0x423>
+     f12:	09 2d       	mov	r16, r9
+     f14:	0e 7e       	andi	r16, 0xEE	; 238
+     f16:	05 c0       	rjmp	.+10     	; 0xf22 <__stack+0x423>
+     f18:	dc 2c       	mov	r13, r12
+     f1a:	09 2d       	mov	r16, r9
+     f1c:	03 c0       	rjmp	.+6      	; 0xf24 <__stack+0x425>
+     f1e:	dc 2c       	mov	r13, r12
+     f20:	01 c0       	rjmp	.+2      	; 0xf24 <__stack+0x425>
+     f22:	d1 2e       	mov	r13, r17
+     f24:	04 ff       	sbrs	r16, 4
+     f26:	0d c0       	rjmp	.+26     	; 0xf42 <__stack+0x443>
+     f28:	fe 01       	movw	r30, r28
+     f2a:	ec 0d       	add	r30, r12
+     f2c:	f1 1d       	adc	r31, r1
+     f2e:	80 81       	ld	r24, Z
+     f30:	80 33       	cpi	r24, 0x30	; 48
+     f32:	11 f4       	brne	.+4      	; 0xf38 <__stack+0x439>
+     f34:	09 7e       	andi	r16, 0xE9	; 233
+     f36:	09 c0       	rjmp	.+18     	; 0xf4a <__stack+0x44b>
+     f38:	02 ff       	sbrs	r16, 2
+     f3a:	06 c0       	rjmp	.+12     	; 0xf48 <__stack+0x449>
+     f3c:	d3 94       	inc	r13
+     f3e:	d3 94       	inc	r13
+     f40:	04 c0       	rjmp	.+8      	; 0xf4a <__stack+0x44b>
+     f42:	80 2f       	mov	r24, r16
+     f44:	86 78       	andi	r24, 0x86	; 134
+     f46:	09 f0       	breq	.+2      	; 0xf4a <__stack+0x44b>
+     f48:	d3 94       	inc	r13
+     f4a:	03 fd       	sbrc	r16, 3
+     f4c:	11 c0       	rjmp	.+34     	; 0xf70 <__stack+0x471>
+     f4e:	00 ff       	sbrs	r16, 0
+     f50:	06 c0       	rjmp	.+12     	; 0xf5e <__stack+0x45f>
+     f52:	1c 2d       	mov	r17, r12
+     f54:	d5 14       	cp	r13, r5
+     f56:	80 f4       	brcc	.+32     	; 0xf78 <__stack+0x479>
+     f58:	15 0d       	add	r17, r5
+     f5a:	1d 19       	sub	r17, r13
+     f5c:	0d c0       	rjmp	.+26     	; 0xf78 <__stack+0x479>
+     f5e:	d5 14       	cp	r13, r5
+     f60:	58 f4       	brcc	.+22     	; 0xf78 <__stack+0x479>
+     f62:	b7 01       	movw	r22, r14
+     f64:	80 e2       	ldi	r24, 0x20	; 32
+     f66:	90 e0       	ldi	r25, 0x00	; 0
+     f68:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     f6c:	d3 94       	inc	r13
+     f6e:	f7 cf       	rjmp	.-18     	; 0xf5e <__stack+0x45f>
+     f70:	d5 14       	cp	r13, r5
+     f72:	10 f4       	brcc	.+4      	; 0xf78 <__stack+0x479>
+     f74:	5d 18       	sub	r5, r13
+     f76:	01 c0       	rjmp	.+2      	; 0xf7a <__stack+0x47b>
+     f78:	51 2c       	mov	r5, r1
+     f7a:	04 ff       	sbrs	r16, 4
+     f7c:	10 c0       	rjmp	.+32     	; 0xf9e <__stack+0x49f>
+     f7e:	b7 01       	movw	r22, r14
+     f80:	80 e3       	ldi	r24, 0x30	; 48
+     f82:	90 e0       	ldi	r25, 0x00	; 0
+     f84:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     f88:	02 ff       	sbrs	r16, 2
+     f8a:	17 c0       	rjmp	.+46     	; 0xfba <__stack+0x4bb>
+     f8c:	01 fd       	sbrc	r16, 1
+     f8e:	03 c0       	rjmp	.+6      	; 0xf96 <__stack+0x497>
+     f90:	88 e7       	ldi	r24, 0x78	; 120
+     f92:	90 e0       	ldi	r25, 0x00	; 0
+     f94:	02 c0       	rjmp	.+4      	; 0xf9a <__stack+0x49b>
+     f96:	88 e5       	ldi	r24, 0x58	; 88
+     f98:	90 e0       	ldi	r25, 0x00	; 0
+     f9a:	b7 01       	movw	r22, r14
+     f9c:	0c c0       	rjmp	.+24     	; 0xfb6 <__stack+0x4b7>
+     f9e:	80 2f       	mov	r24, r16
+     fa0:	86 78       	andi	r24, 0x86	; 134
+     fa2:	59 f0       	breq	.+22     	; 0xfba <__stack+0x4bb>
+     fa4:	01 ff       	sbrs	r16, 1
+     fa6:	02 c0       	rjmp	.+4      	; 0xfac <__stack+0x4ad>
+     fa8:	8b e2       	ldi	r24, 0x2B	; 43
+     faa:	01 c0       	rjmp	.+2      	; 0xfae <__stack+0x4af>
+     fac:	80 e2       	ldi	r24, 0x20	; 32
+     fae:	07 fd       	sbrc	r16, 7
+     fb0:	8d e2       	ldi	r24, 0x2D	; 45
+     fb2:	b7 01       	movw	r22, r14
+     fb4:	90 e0       	ldi	r25, 0x00	; 0
+     fb6:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     fba:	c1 16       	cp	r12, r17
+     fbc:	38 f4       	brcc	.+14     	; 0xfcc <__stack+0x4cd>
+     fbe:	b7 01       	movw	r22, r14
+     fc0:	80 e3       	ldi	r24, 0x30	; 48
+     fc2:	90 e0       	ldi	r25, 0x00	; 0
+     fc4:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     fc8:	11 50       	subi	r17, 0x01	; 1
+     fca:	f7 cf       	rjmp	.-18     	; 0xfba <__stack+0x4bb>
+     fcc:	ca 94       	dec	r12
+     fce:	f3 01       	movw	r30, r6
+     fd0:	ec 0d       	add	r30, r12
+     fd2:	f1 1d       	adc	r31, r1
+     fd4:	80 81       	ld	r24, Z
+     fd6:	b7 01       	movw	r22, r14
+     fd8:	90 e0       	ldi	r25, 0x00	; 0
+     fda:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+     fde:	c1 10       	cpse	r12, r1
+     fe0:	f5 cf       	rjmp	.-22     	; 0xfcc <__stack+0x4cd>
+     fe2:	15 c0       	rjmp	.+42     	; 0x100e <__stack+0x50f>
+     fe4:	f4 e0       	ldi	r31, 0x04	; 4
+     fe6:	f5 15       	cp	r31, r5
+     fe8:	60 f5       	brcc	.+88     	; 0x1042 <__stack+0x543>
+     fea:	84 e0       	ldi	r24, 0x04	; 4
+     fec:	58 1a       	sub	r5, r24
+     fee:	93 fe       	sbrs	r9, 3
+     ff0:	1f c0       	rjmp	.+62     	; 0x1030 <__stack+0x531>
+     ff2:	01 11       	cpse	r16, r1
+     ff4:	27 c0       	rjmp	.+78     	; 0x1044 <__stack+0x545>
+     ff6:	2c 85       	ldd	r18, Y+12	; 0x0c
+     ff8:	23 ff       	sbrs	r18, 3
+     ffa:	2a c0       	rjmp	.+84     	; 0x1050 <__stack+0x551>
+     ffc:	0c ea       	ldi	r16, 0xAC	; 172
+     ffe:	10 e0       	ldi	r17, 0x00	; 0
+    1000:	39 2d       	mov	r19, r9
+    1002:	30 71       	andi	r19, 0x10	; 16
+    1004:	93 2e       	mov	r9, r19
+    1006:	f8 01       	movw	r30, r16
+    1008:	84 91       	lpm	r24, Z
+    100a:	81 11       	cpse	r24, r1
+    100c:	24 c0       	rjmp	.+72     	; 0x1056 <__stack+0x557>
+    100e:	55 20       	and	r5, r5
+    1010:	09 f4       	brne	.+2      	; 0x1014 <__stack+0x515>
+    1012:	e4 cc       	rjmp	.-1592   	; 0x9dc <vfprintf+0x58>
+    1014:	b7 01       	movw	r22, r14
+    1016:	80 e2       	ldi	r24, 0x20	; 32
+    1018:	90 e0       	ldi	r25, 0x00	; 0
+    101a:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+    101e:	5a 94       	dec	r5
+    1020:	f6 cf       	rjmp	.-20     	; 0x100e <__stack+0x50f>
+    1022:	f7 01       	movw	r30, r14
+    1024:	86 81       	ldd	r24, Z+6	; 0x06
+    1026:	97 81       	ldd	r25, Z+7	; 0x07
+    1028:	26 c0       	rjmp	.+76     	; 0x1076 <__stack+0x577>
+    102a:	8f ef       	ldi	r24, 0xFF	; 255
+    102c:	9f ef       	ldi	r25, 0xFF	; 255
+    102e:	23 c0       	rjmp	.+70     	; 0x1076 <__stack+0x577>
+    1030:	b7 01       	movw	r22, r14
+    1032:	80 e2       	ldi	r24, 0x20	; 32
+    1034:	90 e0       	ldi	r25, 0x00	; 0
+    1036:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+    103a:	5a 94       	dec	r5
+    103c:	51 10       	cpse	r5, r1
+    103e:	f8 cf       	rjmp	.-16     	; 0x1030 <__stack+0x531>
+    1040:	d8 cf       	rjmp	.-80     	; 0xff2 <__stack+0x4f3>
+    1042:	51 2c       	mov	r5, r1
+    1044:	b7 01       	movw	r22, r14
+    1046:	80 2f       	mov	r24, r16
+    1048:	90 e0       	ldi	r25, 0x00	; 0
+    104a:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+    104e:	d3 cf       	rjmp	.-90     	; 0xff6 <__stack+0x4f7>
+    1050:	00 eb       	ldi	r16, 0xB0	; 176
+    1052:	10 e0       	ldi	r17, 0x00	; 0
+    1054:	d5 cf       	rjmp	.-86     	; 0x1000 <__stack+0x501>
+    1056:	91 10       	cpse	r9, r1
+    1058:	80 52       	subi	r24, 0x20	; 32
+    105a:	b7 01       	movw	r22, r14
+    105c:	90 e0       	ldi	r25, 0x00	; 0
+    105e:	0e 94 64 09 	call	0x12c8	; 0x12c8 <fputc>
+    1062:	0f 5f       	subi	r16, 0xFF	; 255
+    1064:	1f 4f       	sbci	r17, 0xFF	; 255
+    1066:	cf cf       	rjmp	.-98     	; 0x1006 <__stack+0x507>
+    1068:	23 e0       	ldi	r18, 0x03	; 3
+    106a:	25 15       	cp	r18, r5
+    106c:	10 f4       	brcc	.+4      	; 0x1072 <__stack+0x573>
+    106e:	83 e0       	ldi	r24, 0x03	; 3
+    1070:	bd cf       	rjmp	.-134    	; 0xfec <__stack+0x4ed>
+    1072:	51 2c       	mov	r5, r1
+    1074:	c0 cf       	rjmp	.-128    	; 0xff6 <__stack+0x4f7>
+    1076:	60 96       	adiw	r28, 0x10	; 16
+    1078:	e2 e1       	ldi	r30, 0x12	; 18
+    107a:	0c 94 5b 08 	jmp	0x10b6	; 0x10b6 <__epilogue_restores__>
+
+0000107e <__prologue_saves__>:
+    107e:	2f 92       	push	r2
+    1080:	3f 92       	push	r3
+    1082:	4f 92       	push	r4
+    1084:	5f 92       	push	r5
+    1086:	6f 92       	push	r6
+    1088:	7f 92       	push	r7
+    108a:	8f 92       	push	r8
+    108c:	9f 92       	push	r9
+    108e:	af 92       	push	r10
+    1090:	bf 92       	push	r11
+    1092:	cf 92       	push	r12
+    1094:	df 92       	push	r13
+    1096:	ef 92       	push	r14
+    1098:	ff 92       	push	r15
+    109a:	0f 93       	push	r16
+    109c:	1f 93       	push	r17
+    109e:	cf 93       	push	r28
+    10a0:	df 93       	push	r29
+    10a2:	cd b7       	in	r28, 0x3d	; 61
+    10a4:	de b7       	in	r29, 0x3e	; 62
+    10a6:	ca 1b       	sub	r28, r26
+    10a8:	db 0b       	sbc	r29, r27
+    10aa:	0f b6       	in	r0, 0x3f	; 63
+    10ac:	f8 94       	cli
+    10ae:	de bf       	out	0x3e, r29	; 62
+    10b0:	0f be       	out	0x3f, r0	; 63
+    10b2:	cd bf       	out	0x3d, r28	; 61
+    10b4:	09 94       	ijmp
+
+000010b6 <__epilogue_restores__>:
+    10b6:	2a 88       	ldd	r2, Y+18	; 0x12
+    10b8:	39 88       	ldd	r3, Y+17	; 0x11
+    10ba:	48 88       	ldd	r4, Y+16	; 0x10
+    10bc:	5f 84       	ldd	r5, Y+15	; 0x0f
+    10be:	6e 84       	ldd	r6, Y+14	; 0x0e
+    10c0:	7d 84       	ldd	r7, Y+13	; 0x0d
+    10c2:	8c 84       	ldd	r8, Y+12	; 0x0c
+    10c4:	9b 84       	ldd	r9, Y+11	; 0x0b
+    10c6:	aa 84       	ldd	r10, Y+10	; 0x0a
+    10c8:	b9 84       	ldd	r11, Y+9	; 0x09
+    10ca:	c8 84       	ldd	r12, Y+8	; 0x08
+    10cc:	df 80       	ldd	r13, Y+7	; 0x07
+    10ce:	ee 80       	ldd	r14, Y+6	; 0x06
+    10d0:	fd 80       	ldd	r15, Y+5	; 0x05
+    10d2:	0c 81       	ldd	r16, Y+4	; 0x04
+    10d4:	1b 81       	ldd	r17, Y+3	; 0x03
+    10d6:	aa 81       	ldd	r26, Y+2	; 0x02
+    10d8:	b9 81       	ldd	r27, Y+1	; 0x01
+    10da:	ce 0f       	add	r28, r30
+    10dc:	d1 1d       	adc	r29, r1
+    10de:	0f b6       	in	r0, 0x3f	; 63
+    10e0:	f8 94       	cli
+    10e2:	de bf       	out	0x3e, r29	; 62
+    10e4:	0f be       	out	0x3f, r0	; 63
+    10e6:	cd bf       	out	0x3d, r28	; 61
+    10e8:	ed 01       	movw	r28, r26
+    10ea:	08 95       	ret
+
+000010ec <__ftoa_engine>:
+    10ec:	28 30       	cpi	r18, 0x08	; 8
+    10ee:	08 f0       	brcs	.+2      	; 0x10f2 <__ftoa_engine+0x6>
+    10f0:	27 e0       	ldi	r18, 0x07	; 7
+    10f2:	33 27       	eor	r19, r19
+    10f4:	da 01       	movw	r26, r20
+    10f6:	99 0f       	add	r25, r25
+    10f8:	31 1d       	adc	r19, r1
+    10fa:	87 fd       	sbrc	r24, 7
+    10fc:	91 60       	ori	r25, 0x01	; 1
+    10fe:	00 96       	adiw	r24, 0x00	; 0
+    1100:	61 05       	cpc	r22, r1
+    1102:	71 05       	cpc	r23, r1
+    1104:	39 f4       	brne	.+14     	; 0x1114 <__ftoa_engine+0x28>
+    1106:	32 60       	ori	r19, 0x02	; 2
+    1108:	2e 5f       	subi	r18, 0xFE	; 254
+    110a:	3d 93       	st	X+, r19
+    110c:	30 e3       	ldi	r19, 0x30	; 48
+    110e:	2a 95       	dec	r18
+    1110:	e1 f7       	brne	.-8      	; 0x110a <__ftoa_engine+0x1e>
+    1112:	08 95       	ret
+    1114:	9f 3f       	cpi	r25, 0xFF	; 255
+    1116:	30 f0       	brcs	.+12     	; 0x1124 <__ftoa_engine+0x38>
+    1118:	80 38       	cpi	r24, 0x80	; 128
+    111a:	71 05       	cpc	r23, r1
+    111c:	61 05       	cpc	r22, r1
+    111e:	09 f0       	breq	.+2      	; 0x1122 <__ftoa_engine+0x36>
+    1120:	3c 5f       	subi	r19, 0xFC	; 252
+    1122:	3c 5f       	subi	r19, 0xFC	; 252
+    1124:	3d 93       	st	X+, r19
+    1126:	91 30       	cpi	r25, 0x01	; 1
+    1128:	08 f0       	brcs	.+2      	; 0x112c <__ftoa_engine+0x40>
+    112a:	80 68       	ori	r24, 0x80	; 128
+    112c:	91 1d       	adc	r25, r1
+    112e:	df 93       	push	r29
+    1130:	cf 93       	push	r28
+    1132:	1f 93       	push	r17
+    1134:	0f 93       	push	r16
+    1136:	ff 92       	push	r15
+    1138:	ef 92       	push	r14
+    113a:	19 2f       	mov	r17, r25
+    113c:	98 7f       	andi	r25, 0xF8	; 248
+    113e:	96 95       	lsr	r25
+    1140:	e9 2f       	mov	r30, r25
+    1142:	96 95       	lsr	r25
+    1144:	96 95       	lsr	r25
+    1146:	e9 0f       	add	r30, r25
+    1148:	ff 27       	eor	r31, r31
+    114a:	e2 5f       	subi	r30, 0xF2	; 242
+    114c:	fe 4f       	sbci	r31, 0xFE	; 254
+    114e:	99 27       	eor	r25, r25
+    1150:	33 27       	eor	r19, r19
+    1152:	ee 24       	eor	r14, r14
+    1154:	ff 24       	eor	r15, r15
+    1156:	a7 01       	movw	r20, r14
+    1158:	e7 01       	movw	r28, r14
+    115a:	05 90       	lpm	r0, Z+
+    115c:	08 94       	sec
+    115e:	07 94       	ror	r0
+    1160:	28 f4       	brcc	.+10     	; 0x116c <__ftoa_engine+0x80>
+    1162:	36 0f       	add	r19, r22
+    1164:	e7 1e       	adc	r14, r23
+    1166:	f8 1e       	adc	r15, r24
+    1168:	49 1f       	adc	r20, r25
+    116a:	51 1d       	adc	r21, r1
+    116c:	66 0f       	add	r22, r22
+    116e:	77 1f       	adc	r23, r23
+    1170:	88 1f       	adc	r24, r24
+    1172:	99 1f       	adc	r25, r25
+    1174:	06 94       	lsr	r0
+    1176:	a1 f7       	brne	.-24     	; 0x1160 <__ftoa_engine+0x74>
+    1178:	05 90       	lpm	r0, Z+
+    117a:	07 94       	ror	r0
+    117c:	28 f4       	brcc	.+10     	; 0x1188 <__ftoa_engine+0x9c>
+    117e:	e7 0e       	add	r14, r23
+    1180:	f8 1e       	adc	r15, r24
+    1182:	49 1f       	adc	r20, r25
+    1184:	56 1f       	adc	r21, r22
+    1186:	c1 1d       	adc	r28, r1
+    1188:	77 0f       	add	r23, r23
+    118a:	88 1f       	adc	r24, r24
+    118c:	99 1f       	adc	r25, r25
+    118e:	66 1f       	adc	r22, r22
+    1190:	06 94       	lsr	r0
+    1192:	a1 f7       	brne	.-24     	; 0x117c <__ftoa_engine+0x90>
+    1194:	05 90       	lpm	r0, Z+
+    1196:	07 94       	ror	r0
+    1198:	28 f4       	brcc	.+10     	; 0x11a4 <__ftoa_engine+0xb8>
+    119a:	f8 0e       	add	r15, r24
+    119c:	49 1f       	adc	r20, r25
+    119e:	56 1f       	adc	r21, r22
+    11a0:	c7 1f       	adc	r28, r23
+    11a2:	d1 1d       	adc	r29, r1
+    11a4:	88 0f       	add	r24, r24
+    11a6:	99 1f       	adc	r25, r25
+    11a8:	66 1f       	adc	r22, r22
+    11aa:	77 1f       	adc	r23, r23
+    11ac:	06 94       	lsr	r0
+    11ae:	a1 f7       	brne	.-24     	; 0x1198 <__ftoa_engine+0xac>
+    11b0:	05 90       	lpm	r0, Z+
+    11b2:	07 94       	ror	r0
+    11b4:	20 f4       	brcc	.+8      	; 0x11be <__ftoa_engine+0xd2>
+    11b6:	49 0f       	add	r20, r25
+    11b8:	56 1f       	adc	r21, r22
+    11ba:	c7 1f       	adc	r28, r23
+    11bc:	d8 1f       	adc	r29, r24
+    11be:	99 0f       	add	r25, r25
+    11c0:	66 1f       	adc	r22, r22
+    11c2:	77 1f       	adc	r23, r23
+    11c4:	88 1f       	adc	r24, r24
+    11c6:	06 94       	lsr	r0
+    11c8:	a9 f7       	brne	.-22     	; 0x11b4 <__ftoa_engine+0xc8>
+    11ca:	84 91       	lpm	r24, Z
+    11cc:	10 95       	com	r17
+    11ce:	17 70       	andi	r17, 0x07	; 7
+    11d0:	41 f0       	breq	.+16     	; 0x11e2 <__ftoa_engine+0xf6>
+    11d2:	d6 95       	lsr	r29
+    11d4:	c7 95       	ror	r28
+    11d6:	57 95       	ror	r21
+    11d8:	47 95       	ror	r20
+    11da:	f7 94       	ror	r15
+    11dc:	e7 94       	ror	r14
+    11de:	1a 95       	dec	r17
+    11e0:	c1 f7       	brne	.-16     	; 0x11d2 <__ftoa_engine+0xe6>
+    11e2:	e4 eb       	ldi	r30, 0xB4	; 180
+    11e4:	f0 e0       	ldi	r31, 0x00	; 0
+    11e6:	68 94       	set
+    11e8:	15 90       	lpm	r1, Z+
+    11ea:	15 91       	lpm	r17, Z+
+    11ec:	35 91       	lpm	r19, Z+
+    11ee:	65 91       	lpm	r22, Z+
+    11f0:	95 91       	lpm	r25, Z+
+    11f2:	05 90       	lpm	r0, Z+
+    11f4:	7f e2       	ldi	r23, 0x2F	; 47
+    11f6:	73 95       	inc	r23
+    11f8:	e1 18       	sub	r14, r1
+    11fa:	f1 0a       	sbc	r15, r17
+    11fc:	43 0b       	sbc	r20, r19
+    11fe:	56 0b       	sbc	r21, r22
+    1200:	c9 0b       	sbc	r28, r25
+    1202:	d0 09       	sbc	r29, r0
+    1204:	c0 f7       	brcc	.-16     	; 0x11f6 <__ftoa_engine+0x10a>
+    1206:	e1 0c       	add	r14, r1
+    1208:	f1 1e       	adc	r15, r17
+    120a:	43 1f       	adc	r20, r19
+    120c:	56 1f       	adc	r21, r22
+    120e:	c9 1f       	adc	r28, r25
+    1210:	d0 1d       	adc	r29, r0
+    1212:	7e f4       	brtc	.+30     	; 0x1232 <__ftoa_engine+0x146>
+    1214:	70 33       	cpi	r23, 0x30	; 48
+    1216:	11 f4       	brne	.+4      	; 0x121c <__ftoa_engine+0x130>
+    1218:	8a 95       	dec	r24
+    121a:	e6 cf       	rjmp	.-52     	; 0x11e8 <__ftoa_engine+0xfc>
+    121c:	e8 94       	clt
+    121e:	01 50       	subi	r16, 0x01	; 1
+    1220:	30 f0       	brcs	.+12     	; 0x122e <__ftoa_engine+0x142>
+    1222:	08 0f       	add	r16, r24
+    1224:	0a f4       	brpl	.+2      	; 0x1228 <__ftoa_engine+0x13c>
+    1226:	00 27       	eor	r16, r16
+    1228:	02 17       	cp	r16, r18
+    122a:	08 f4       	brcc	.+2      	; 0x122e <__ftoa_engine+0x142>
+    122c:	20 2f       	mov	r18, r16
+    122e:	23 95       	inc	r18
+    1230:	02 2f       	mov	r16, r18
+    1232:	7a 33       	cpi	r23, 0x3A	; 58
+    1234:	28 f0       	brcs	.+10     	; 0x1240 <__ftoa_engine+0x154>
+    1236:	79 e3       	ldi	r23, 0x39	; 57
+    1238:	7d 93       	st	X+, r23
+    123a:	2a 95       	dec	r18
+    123c:	e9 f7       	brne	.-6      	; 0x1238 <__ftoa_engine+0x14c>
+    123e:	10 c0       	rjmp	.+32     	; 0x1260 <__ftoa_engine+0x174>
+    1240:	7d 93       	st	X+, r23
+    1242:	2a 95       	dec	r18
+    1244:	89 f6       	brne	.-94     	; 0x11e8 <__ftoa_engine+0xfc>
+    1246:	06 94       	lsr	r0
+    1248:	97 95       	ror	r25
+    124a:	67 95       	ror	r22
+    124c:	37 95       	ror	r19
+    124e:	17 95       	ror	r17
+    1250:	17 94       	ror	r1
+    1252:	e1 18       	sub	r14, r1
+    1254:	f1 0a       	sbc	r15, r17
+    1256:	43 0b       	sbc	r20, r19
+    1258:	56 0b       	sbc	r21, r22
+    125a:	c9 0b       	sbc	r28, r25
+    125c:	d0 09       	sbc	r29, r0
+    125e:	98 f0       	brcs	.+38     	; 0x1286 <__ftoa_engine+0x19a>
+    1260:	23 95       	inc	r18
+    1262:	7e 91       	ld	r23, -X
+    1264:	73 95       	inc	r23
+    1266:	7a 33       	cpi	r23, 0x3A	; 58
+    1268:	08 f0       	brcs	.+2      	; 0x126c <__ftoa_engine+0x180>
+    126a:	70 e3       	ldi	r23, 0x30	; 48
+    126c:	7c 93       	st	X, r23
+    126e:	20 13       	cpse	r18, r16
+    1270:	b8 f7       	brcc	.-18     	; 0x1260 <__ftoa_engine+0x174>
+    1272:	7e 91       	ld	r23, -X
+    1274:	70 61       	ori	r23, 0x10	; 16
+    1276:	7d 93       	st	X+, r23
+    1278:	30 f0       	brcs	.+12     	; 0x1286 <__ftoa_engine+0x19a>
+    127a:	83 95       	inc	r24
+    127c:	71 e3       	ldi	r23, 0x31	; 49
+    127e:	7d 93       	st	X+, r23
+    1280:	70 e3       	ldi	r23, 0x30	; 48
+    1282:	2a 95       	dec	r18
+    1284:	e1 f7       	brne	.-8      	; 0x127e <__ftoa_engine+0x192>
+    1286:	11 24       	eor	r1, r1
+    1288:	ef 90       	pop	r14
+    128a:	ff 90       	pop	r15
+    128c:	0f 91       	pop	r16
+    128e:	1f 91       	pop	r17
+    1290:	cf 91       	pop	r28
+    1292:	df 91       	pop	r29
+    1294:	99 27       	eor	r25, r25
+    1296:	87 fd       	sbrc	r24, 7
+    1298:	90 95       	com	r25
+    129a:	08 95       	ret
+
+0000129c <strnlen_P>:
+    129c:	fc 01       	movw	r30, r24
+    129e:	05 90       	lpm	r0, Z+
+    12a0:	61 50       	subi	r22, 0x01	; 1
+    12a2:	70 40       	sbci	r23, 0x00	; 0
+    12a4:	01 10       	cpse	r0, r1
+    12a6:	d8 f7       	brcc	.-10     	; 0x129e <strnlen_P+0x2>
+    12a8:	80 95       	com	r24
+    12aa:	90 95       	com	r25
+    12ac:	8e 0f       	add	r24, r30
+    12ae:	9f 1f       	adc	r25, r31
+    12b0:	08 95       	ret
+
+000012b2 <strnlen>:
+    12b2:	fc 01       	movw	r30, r24
+    12b4:	61 50       	subi	r22, 0x01	; 1
+    12b6:	70 40       	sbci	r23, 0x00	; 0
+    12b8:	01 90       	ld	r0, Z+
+    12ba:	01 10       	cpse	r0, r1
+    12bc:	d8 f7       	brcc	.-10     	; 0x12b4 <strnlen+0x2>
+    12be:	80 95       	com	r24
+    12c0:	90 95       	com	r25
+    12c2:	8e 0f       	add	r24, r30
+    12c4:	9f 1f       	adc	r25, r31
+    12c6:	08 95       	ret
+
+000012c8 <fputc>:
+    12c8:	0f 93       	push	r16
+    12ca:	1f 93       	push	r17
+    12cc:	cf 93       	push	r28
+    12ce:	df 93       	push	r29
+    12d0:	fb 01       	movw	r30, r22
+    12d2:	23 81       	ldd	r18, Z+3	; 0x03
+    12d4:	21 fd       	sbrc	r18, 1
+    12d6:	03 c0       	rjmp	.+6      	; 0x12de <fputc+0x16>
+    12d8:	8f ef       	ldi	r24, 0xFF	; 255
+    12da:	9f ef       	ldi	r25, 0xFF	; 255
+    12dc:	2c c0       	rjmp	.+88     	; 0x1336 <fputc+0x6e>
+    12de:	22 ff       	sbrs	r18, 2
+    12e0:	16 c0       	rjmp	.+44     	; 0x130e <fputc+0x46>
+    12e2:	46 81       	ldd	r20, Z+6	; 0x06
+    12e4:	57 81       	ldd	r21, Z+7	; 0x07
+    12e6:	24 81       	ldd	r18, Z+4	; 0x04
+    12e8:	35 81       	ldd	r19, Z+5	; 0x05
+    12ea:	42 17       	cp	r20, r18
+    12ec:	53 07       	cpc	r21, r19
+    12ee:	44 f4       	brge	.+16     	; 0x1300 <fputc+0x38>
+    12f0:	a0 81       	ld	r26, Z
+    12f2:	b1 81       	ldd	r27, Z+1	; 0x01
+    12f4:	9d 01       	movw	r18, r26
+    12f6:	2f 5f       	subi	r18, 0xFF	; 255
+    12f8:	3f 4f       	sbci	r19, 0xFF	; 255
+    12fa:	31 83       	std	Z+1, r19	; 0x01
+    12fc:	20 83       	st	Z, r18
+    12fe:	8c 93       	st	X, r24
+    1300:	26 81       	ldd	r18, Z+6	; 0x06
+    1302:	37 81       	ldd	r19, Z+7	; 0x07
+    1304:	2f 5f       	subi	r18, 0xFF	; 255
+    1306:	3f 4f       	sbci	r19, 0xFF	; 255
+    1308:	37 83       	std	Z+7, r19	; 0x07
+    130a:	26 83       	std	Z+6, r18	; 0x06
+    130c:	14 c0       	rjmp	.+40     	; 0x1336 <fputc+0x6e>
+    130e:	8b 01       	movw	r16, r22
+    1310:	ec 01       	movw	r28, r24
+    1312:	fb 01       	movw	r30, r22
+    1314:	00 84       	ldd	r0, Z+8	; 0x08
+    1316:	f1 85       	ldd	r31, Z+9	; 0x09
+    1318:	e0 2d       	mov	r30, r0
+    131a:	09 95       	icall
+    131c:	89 2b       	or	r24, r25
+    131e:	e1 f6       	brne	.-72     	; 0x12d8 <fputc+0x10>
+    1320:	d8 01       	movw	r26, r16
+    1322:	16 96       	adiw	r26, 0x06	; 6
+    1324:	8d 91       	ld	r24, X+
+    1326:	9c 91       	ld	r25, X
+    1328:	17 97       	sbiw	r26, 0x07	; 7
+    132a:	01 96       	adiw	r24, 0x01	; 1
+    132c:	17 96       	adiw	r26, 0x07	; 7
+    132e:	9c 93       	st	X, r25
+    1330:	8e 93       	st	-X, r24
+    1332:	16 97       	sbiw	r26, 0x06	; 6
+    1334:	ce 01       	movw	r24, r28
+    1336:	df 91       	pop	r29
+    1338:	cf 91       	pop	r28
+    133a:	1f 91       	pop	r17
+    133c:	0f 91       	pop	r16
+    133e:	08 95       	ret
+
+00001340 <vsprintf>:
+    1340:	ae e0       	ldi	r26, 0x0E	; 14
+    1342:	b0 e0       	ldi	r27, 0x00	; 0
+    1344:	e6 ea       	ldi	r30, 0xA6	; 166
+    1346:	f9 e0       	ldi	r31, 0x09	; 9
+    1348:	0c 94 4d 08 	jmp	0x109a	; 0x109a <__prologue_saves__+0x1c>
+    134c:	8c 01       	movw	r16, r24
+    134e:	86 e0       	ldi	r24, 0x06	; 6
+    1350:	8c 83       	std	Y+4, r24	; 0x04
+    1352:	1a 83       	std	Y+2, r17	; 0x02
+    1354:	09 83       	std	Y+1, r16	; 0x01
+    1356:	8f ef       	ldi	r24, 0xFF	; 255
+    1358:	9f e7       	ldi	r25, 0x7F	; 127
+    135a:	9e 83       	std	Y+6, r25	; 0x06
+    135c:	8d 83       	std	Y+5, r24	; 0x05
+    135e:	ce 01       	movw	r24, r28
+    1360:	01 96       	adiw	r24, 0x01	; 1
+    1362:	0e 94 c2 04 	call	0x984	; 0x984 <vfprintf>
+    1366:	ef 81       	ldd	r30, Y+7	; 0x07
+    1368:	f8 85       	ldd	r31, Y+8	; 0x08
+    136a:	e0 0f       	add	r30, r16
+    136c:	f1 1f       	adc	r31, r17
+    136e:	10 82       	st	Z, r1
+    1370:	2e 96       	adiw	r28, 0x0e	; 14
+    1372:	e4 e0       	ldi	r30, 0x04	; 4
+    1374:	0c 94 69 08 	jmp	0x10d2	; 0x10d2 <__epilogue_restores__+0x1c>
+
+00001378 <__ultoa_invert>:
+    1378:	fa 01       	movw	r30, r20
+    137a:	aa 27       	eor	r26, r26
+    137c:	28 30       	cpi	r18, 0x08	; 8
+    137e:	51 f1       	breq	.+84     	; 0x13d4 <__ultoa_invert+0x5c>
+    1380:	20 31       	cpi	r18, 0x10	; 16
+    1382:	81 f1       	breq	.+96     	; 0x13e4 <__ultoa_invert+0x6c>
+    1384:	e8 94       	clt
+    1386:	6f 93       	push	r22
+    1388:	6e 7f       	andi	r22, 0xFE	; 254
+    138a:	6e 5f       	subi	r22, 0xFE	; 254
+    138c:	7f 4f       	sbci	r23, 0xFF	; 255
+    138e:	8f 4f       	sbci	r24, 0xFF	; 255
+    1390:	9f 4f       	sbci	r25, 0xFF	; 255
+    1392:	af 4f       	sbci	r26, 0xFF	; 255
+    1394:	b1 e0       	ldi	r27, 0x01	; 1
+    1396:	3e d0       	rcall	.+124    	; 0x1414 <__ultoa_invert+0x9c>
+    1398:	b4 e0       	ldi	r27, 0x04	; 4
+    139a:	3c d0       	rcall	.+120    	; 0x1414 <__ultoa_invert+0x9c>
+    139c:	67 0f       	add	r22, r23
+    139e:	78 1f       	adc	r23, r24
+    13a0:	89 1f       	adc	r24, r25
+    13a2:	9a 1f       	adc	r25, r26
+    13a4:	a1 1d       	adc	r26, r1
+    13a6:	68 0f       	add	r22, r24
+    13a8:	79 1f       	adc	r23, r25
+    13aa:	8a 1f       	adc	r24, r26
+    13ac:	91 1d       	adc	r25, r1
+    13ae:	a1 1d       	adc	r26, r1
+    13b0:	6a 0f       	add	r22, r26
+    13b2:	71 1d       	adc	r23, r1
+    13b4:	81 1d       	adc	r24, r1
+    13b6:	91 1d       	adc	r25, r1
+    13b8:	a1 1d       	adc	r26, r1
+    13ba:	20 d0       	rcall	.+64     	; 0x13fc <__ultoa_invert+0x84>
+    13bc:	09 f4       	brne	.+2      	; 0x13c0 <__ultoa_invert+0x48>
+    13be:	68 94       	set
+    13c0:	3f 91       	pop	r19
+    13c2:	2a e0       	ldi	r18, 0x0A	; 10
+    13c4:	26 9f       	mul	r18, r22
+    13c6:	11 24       	eor	r1, r1
+    13c8:	30 19       	sub	r19, r0
+    13ca:	30 5d       	subi	r19, 0xD0	; 208
+    13cc:	31 93       	st	Z+, r19
+    13ce:	de f6       	brtc	.-74     	; 0x1386 <__ultoa_invert+0xe>
+    13d0:	cf 01       	movw	r24, r30
+    13d2:	08 95       	ret
+    13d4:	46 2f       	mov	r20, r22
+    13d6:	47 70       	andi	r20, 0x07	; 7
+    13d8:	40 5d       	subi	r20, 0xD0	; 208
+    13da:	41 93       	st	Z+, r20
+    13dc:	b3 e0       	ldi	r27, 0x03	; 3
+    13de:	0f d0       	rcall	.+30     	; 0x13fe <__ultoa_invert+0x86>
+    13e0:	c9 f7       	brne	.-14     	; 0x13d4 <__ultoa_invert+0x5c>
+    13e2:	f6 cf       	rjmp	.-20     	; 0x13d0 <__ultoa_invert+0x58>
+    13e4:	46 2f       	mov	r20, r22
+    13e6:	4f 70       	andi	r20, 0x0F	; 15
+    13e8:	40 5d       	subi	r20, 0xD0	; 208
+    13ea:	4a 33       	cpi	r20, 0x3A	; 58
+    13ec:	18 f0       	brcs	.+6      	; 0x13f4 <__ultoa_invert+0x7c>
+    13ee:	49 5d       	subi	r20, 0xD9	; 217
+    13f0:	31 fd       	sbrc	r19, 1
+    13f2:	40 52       	subi	r20, 0x20	; 32
+    13f4:	41 93       	st	Z+, r20
+    13f6:	02 d0       	rcall	.+4      	; 0x13fc <__ultoa_invert+0x84>
+    13f8:	a9 f7       	brne	.-22     	; 0x13e4 <__ultoa_invert+0x6c>
+    13fa:	ea cf       	rjmp	.-44     	; 0x13d0 <__ultoa_invert+0x58>
+    13fc:	b4 e0       	ldi	r27, 0x04	; 4
+    13fe:	a6 95       	lsr	r26
+    1400:	97 95       	ror	r25
+    1402:	87 95       	ror	r24
+    1404:	77 95       	ror	r23
+    1406:	67 95       	ror	r22
+    1408:	ba 95       	dec	r27
+    140a:	c9 f7       	brne	.-14     	; 0x13fe <__ultoa_invert+0x86>
+    140c:	00 97       	sbiw	r24, 0x00	; 0
+    140e:	61 05       	cpc	r22, r1
+    1410:	71 05       	cpc	r23, r1
+    1412:	08 95       	ret
+    1414:	9b 01       	movw	r18, r22
+    1416:	ac 01       	movw	r20, r24
+    1418:	0a 2e       	mov	r0, r26
+    141a:	06 94       	lsr	r0
+    141c:	57 95       	ror	r21
+    141e:	47 95       	ror	r20
+    1420:	37 95       	ror	r19
+    1422:	27 95       	ror	r18
+    1424:	ba 95       	dec	r27
+    1426:	c9 f7       	brne	.-14     	; 0x141a <__ultoa_invert+0xa2>
+    1428:	62 0f       	add	r22, r18
+    142a:	73 1f       	adc	r23, r19
+    142c:	84 1f       	adc	r24, r20
+    142e:	95 1f       	adc	r25, r21
+    1430:	a0 1d       	adc	r26, r0
+    1432:	08 95       	ret
+
+00001434 <_exit>:
+    1434:	f8 94       	cli
+
+00001436 <__stop_program>:
+    1436:	ff cf       	rjmp	.-2      	; 0x1436 <__stop_program>
