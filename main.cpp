@@ -1,5 +1,5 @@
 /*
-Tema: Parking senzori
+Naslov: Parking senzori
 Autor: Matko Manzin
 */
 
