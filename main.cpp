@@ -164,7 +164,7 @@ static void buzzer_set_pattern(uint8_t zone) { // potrebno proslijediti broj kao
 
 	buzz_phase_ms = 0; // brojac trajanja trenutne faze
 
-	if (buzz_on = 0) { // ako je stanje zujalice iskljuceno
+	if (buzz_on == 0) { // ako je stanje zujalice iskljuceno
 		PORTB |= (1 << BUZZER); // postavi PB7 u visoko stanje (iskljuciti buzzer)
 	}
 }
